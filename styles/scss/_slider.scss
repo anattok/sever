@@ -1,0 +1,27 @@
+.slider {
+  height: 200px;
+  background-color: #fff;
+  background-image: url("/images/slider/pattern-slider.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  &__container {
+    max-width: 1075px;
+    margin: 0 auto;
+  }
+}
+.slider-item {
+  display: flex;
+  &__img {
+    width: 303px;
+    height: 202px;
+  }
+  &__text {
+    @extend%rubik-700;
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    color:$surface-text;
+  }
+}

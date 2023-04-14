@@ -1,0 +1,35 @@
+.promo {
+  &__wrapper {
+    padding-top: 76px;
+    padding-bottom: 44px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__all{
+    padding: 8px 40px 8px 8px;
+    color: $hardest;
+    position: relative;
+    &::after{
+      position: absolute;
+      content: "";
+      background-image: url('/images/icons/arrow-right.svg');
+      background-size: cover;
+      width: 7px;
+      height: 13px;
+      top: 11px;
+      right: 20px;
+
+    }
+    &:hover{
+      color:darken($hardest, 40%);
+    }
+  }
+  
+}

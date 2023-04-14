@@ -1,0 +1,91 @@
+.card {
+  width: 272px;
+  background-color: $white;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  &__img {
+    width: 272px;
+    height: 160px;
+    margin-bottom: 8px;
+  }
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  &__price-left {
+    text-align: left;
+  }
+  &__price-right {
+    text-align: right;
+  }
+  &__main {
+    padding: 8px;
+  }
+  &__price-col {
+    display: flex;
+    flex-direction: column;
+  }
+  &__price-with-digit {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: $surface-text;
+  }
+  &__price-without-digit {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $hardest;
+  }
+  &__price-subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: $light;
+  }
+  &__title {
+    margin-bottom: 8px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-overflow: ellipsis;
+  }
+  &__raiting {
+    margin-bottom: 8px;
+    display: flex;
+  }
+  &__rating-star {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("/images/icons/star.svg");
+    background-size: cover;
+    margin-right: 4px;
+  }
+  &__rating-star--active {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url("/images/icons/star-active.svg");
+    background-size: cover;
+  }
+  &__button {
+    width: 256px;
+    height: 40px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: transparent;
+    color: $secondary;
+    border: 1px solid $secondary;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      color: $white;
+      background-color: $primary;
+      border: 1px solid $primary;
+      transition: 0.2s;
+    }
+  }
+}

@@ -1,4 +1,14 @@
-@import './scss/variables';
-@import './scss/fonts';
-@import './scss/config';
-@import './scss/header';
+@import "./scss/variables";
+@import "./scss/fonts";
+@import "./scss/config";
+@import "./scss/slider";
+@import "./scss/header";
+@import "./scss/promo";
+@import "./scss/card";
+
+.title {
+  @extend%rubik-700;
+  font-size: 36px;
+  line-height: 150%;
+  color:$surface-text;
+}
