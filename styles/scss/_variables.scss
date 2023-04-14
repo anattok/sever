@@ -1,0 +1,32 @@
+//MAIN COLOR
+$bg: #fbf8ec;
+$white: #fff;
+$secondary: #70c05b;
+$primary: #ff6633;
+
+$bg-text: #291e0f;
+$surface-text: #414141;
+
+// GRAYSCALE
+$lightest: #f3f2f1;
+$light: #bfbfbf;
+$hard: #8f8f8f;
+$hardest: #606060;
+
+// PALLETE
+$succes: #008c49;
+$info: #1cb9fc;
+$warning: #fca21c;
+$error: #d80000;
+
+//FONTS
+%rubik-400 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+}
+%rubik-700 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+}

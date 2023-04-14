@@ -1,0 +1,83 @@
+.header {
+  background-color: $white;
+  &__inner {
+    height: 72px;
+    display: flex;
+    align-items: center;
+  }
+  &__menu-btn {
+    width: 140px;
+    height: 40px;
+    color: $white;
+    background-color: $secondary;
+    padding: 8px 8px 8px 40px;
+    margin-left: 40px;
+    text-align: center;
+    border-radius: 4px;
+    @extend%rubik-400;
+    font-size: 16px;
+    line-height: 150%;
+    position: relative;
+  }
+  &__menu-btn:before {
+    position: absolute;
+    content: "";
+    background-image: url("/images/icons/menu.svg");
+    width: 24px;
+    height: 24px;
+    top: 7px;
+    left: 13px;
+  }
+  &__search {
+    width: 375px;
+    height: 40px;
+    background: $white;
+    border: 1px solid $secondary;
+    border-radius: 4px;
+    padding: 8px 42px 8px 16px;
+    margin-left: 16px;
+    color: $hard;
+    font-size: 16px;
+    line-height: 150%;
+    background-image: url("/images/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 7px right 10px;
+  }
+}
+.user {
+  display: flex;
+  margin-left: 40px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+  }
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: $surface-text;
+  }
+  &__btn + .user__btn {
+    margin-left: 24px;
+  }
+  &__btn-icon {
+    width: 24px;
+    height: 24px;
+  }
+  &__account {
+    width: 217px;
+    padding: 16px 16px 16px 30px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+  }
+  &__name {
+    margin-left: 10px;
+    width: 85px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+}

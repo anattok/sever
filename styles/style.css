@@ -1,0 +1,129 @@
+.header__menu-btn {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* rubik-regular - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2"), url("../fonts/Rubik-Regular.woff") format("woff");
+}
+/* rubik-700 - latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Rubik-Bold.woff2") format("woff2"), url("../fonts/Rubik-Bold.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #fbf8ec;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.header {
+  background-color: #fff;
+}
+.header__inner {
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.header__menu-btn {
+  width: 140px;
+  height: 40px;
+  color: #fff;
+  background-color: #70c05b;
+  padding: 8px 8px 8px 40px;
+  margin-left: 40px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 150%;
+  position: relative;
+}
+.header__menu-btn:before {
+  position: absolute;
+  content: "";
+  background-image: url("/images/icons/menu.svg");
+  width: 24px;
+  height: 24px;
+  top: 7px;
+  left: 13px;
+}
+.header__search {
+  width: 375px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #70c05b;
+  border-radius: 4px;
+  padding: 8px 42px 8px 16px;
+  margin-left: 16px;
+  color: #8f8f8f;
+  font-size: 16px;
+  line-height: 150%;
+  background-image: url("/images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 7px right 10px;
+}
+
+.user {
+  display: flex;
+  margin-left: 40px;
+}
+.user__wrapper {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+}
+.user__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #414141;
+}
+.user__btn + .user__btn {
+  margin-left: 24px;
+}
+.user__btn-icon {
+  width: 24px;
+  height: 24px;
+}
+.user__account {
+  width: 217px;
+  padding: 16px 16px 16px 30px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+}
+.user__name {
+  margin-left: 10px;
+  width: 85px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
