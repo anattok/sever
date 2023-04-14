@@ -3,12 +3,9 @@
 @import "./scss/config";
 @import "./scss/slider";
 @import "./scss/header";
-@import "./scss/promo";
+@import "./scss/sections/promo";
+@import "./scss/sections/novelties";
+@import "./scss/sections/earlier";
+// @import "./scss/sections/special";
 @import "./scss/card";
 
-.title {
-  @extend%rubik-700;
-  font-size: 36px;
-  line-height: 150%;
-  color:$surface-text;
-}

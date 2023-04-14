@@ -1,35 +1,36 @@
 .promo {
-  &__wrapper {
-    padding-top: 76px;
-    padding-bottom: 44px;
+  padding-top: 76px;
+  padding-bottom: 44px;
+  &__title{
+    
   }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__content{
+  &__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
-  &__all{
+  &__all {
     padding: 8px 40px 8px 8px;
     color: $hardest;
     position: relative;
-    &::after{
+    &::after {
       position: absolute;
       content: "";
-      background-image: url('/images/icons/arrow-right.svg');
+      background-image: url("/images/icons/arrow-right.svg");
       background-size: cover;
       width: 7px;
       height: 13px;
       top: 11px;
       right: 20px;
-
     }
-    &:hover{
-      color:darken($hardest, 40%);
+    &:hover {
+      color: darken($hardest, 40%);
     }
   }
-  
 }

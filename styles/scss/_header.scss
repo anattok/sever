@@ -1,10 +1,17 @@
+.logo{
+  &__img{
+    width: 152px;
+    height: 32px;
+  }
+}
 .header {
   background-color: $white;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4px;
   &__inner {
     height: 72px;
     display: flex;
     align-items: center;
-    justify-content: center;
   }
   &__menu-btn {
     width: 140px;
@@ -19,16 +26,17 @@
     font-size: 16px;
     line-height: 150%;
     position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      background-image: url("/images/icons/menu.svg");
+      width: 24px;
+      height: 24px;
+      top: 7px;
+      left: 13px;
+    }
   }
-  &__menu-btn:before {
-    position: absolute;
-    content: "";
-    background-image: url("/images/icons/menu.svg");
-    width: 24px;
-    height: 24px;
-    top: 7px;
-    left: 13px;
-  }
+
   &__search {
     width: 375px;
     height: 40px;
@@ -47,6 +55,7 @@
 }
 .user {
   display: flex;
+  align-items: center;
   margin-left: 40px;
   &__wrapper {
     display: flex;
