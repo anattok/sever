@@ -1,16 +1,21 @@
-.logo{
-  &__img{
+.logo {
+  &__img-desctop {
+    display: block;
     width: 152px;
     height: 32px;
+  }
+  &__img-tablet {
+    display: none;
   }
 }
 .header {
   background-color: $white;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 4px;
-  &__inner {
+  &__wrapper {
     height: 72px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
   &__menu-btn {
@@ -21,7 +26,9 @@
     padding: 8px 8px 8px 40px;
     margin-left: 40px;
     text-align: center;
+    border: none;
     border-radius: 4px;
+    cursor: pointer;
     @extend%rubik-400;
     font-size: 16px;
     line-height: 150%;
@@ -29,7 +36,7 @@
     &:before {
       position: absolute;
       content: "";
-      background-image: url("/images/icons/menu.svg");
+      background-image: url("/images/menu/icons/menu.svg");
       width: 24px;
       height: 24px;
       top: 8px;
@@ -48,7 +55,7 @@
     color: $hard;
     font-size: 16px;
     line-height: 150%;
-    background-image: url("/images/icons/search.svg");
+    background-image: url("/images/menu/icons/search.svg");
     background-repeat: no-repeat;
     background-position: bottom 7px right 10px;
   }
@@ -63,11 +70,13 @@
     min-height: 50px;
   }
   &__btn {
+    min-height: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     color: $surface-text;
+    font-size: 12px;
   }
   &__btn + .user__btn {
     margin-left: 24px;
@@ -94,6 +103,7 @@
     background-color: $primary;
     color: $white;
     @extend%rubik-400;
+    font-size: 16px;
     cursor: pointer;
     position: relative;
     transition: 0.2s;
@@ -105,7 +115,7 @@
   &__login-btn::before {
     position: absolute;
     content: "";
-    background-image: url("/images/icons/log-in.svg");
+    background-image: url("/images/menu/icons/log-in.svg");
     width: 24px;
     height: 24px;
     top: 8px;
@@ -117,5 +127,125 @@
     height: 40px;
     display: flex;
     align-items: center;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header {
+    &__wrapper {
+      padding-right: 20px;
+      padding-left: 25px;
+    }
+    &__search {
+      width: 325px;
+    }
+  }
+
+  .user {
+    margin-left: 20px;
+    &__login-btn {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      &:before {
+        left: 8px;
+      }
+    }
+    &__login-btn span {
+      display: none;
+    }
+
+    &__btn + .user__btn {
+      margin-left: 16px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .logo {
+    &__img-desctop {
+      display: none;
+    }
+    &__img-tablet {
+      display: block;
+      width: 49px;
+      height: 40px;
+    }
+  }
+  .header {
+    &__menu-btn span {
+      display: none;
+    }
+    &__menu-btn {
+      margin-left: 20px;
+      width: 40px;
+      height: 40px;
+      padding: 0px;
+      &:before {
+        left: 8px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .header__menu-btn{
+    display: none;
+  }
+  .user__wrapper{
+    display: none;
+  }
+  .user__login-btn{
+    display: none;
+  }
+  .header__search{
+    width: 258px;
+  }
+  .menu-tablet {
+    height: 56px;
+    width: 100%;
+    margin-top: auto;
+    padding: 8px 21px 8px 16px;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    font-size: 8px;
+    line-height: 150%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    &__catalog-btn{
+
+    }
+    &__user-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__user-btn-icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 4px;
+    }
+    &__user-login-btn span {
+      display: none;
+    }
+    &__user-login-btn {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 4px;
+      background-color: $secondary;
+      &:before {
+        position: absolute;
+        content: "";
+        background-image: url("/images/menu/icons/log-in.svg");
+        width: 24px;
+        height: 24px;
+        top: 8px;
+        left: 6px;
+      }
+    }
   }
 }
