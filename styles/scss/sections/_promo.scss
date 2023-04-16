@@ -1,22 +1,28 @@
 .promo {
   padding-top: 76px;
   padding-bottom: 44px;
-  &__title{
-    
-  }
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 40px;
   }
   &__content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  &__title {
+    @extend%rubik-700;
+    font-size: 36px;
+    line-height: 150%;
+  }
   &__all {
     padding: 8px 40px 8px 8px;
+    @extend%rubik-400;
+    font-size: 16px;
+    line-height: 150%;
     color: $hardest;
     position: relative;
     &::after {
@@ -26,7 +32,7 @@
       background-size: cover;
       width: 7px;
       height: 13px;
-      top: 11px;
+      top: 13px;
       right: 20px;
     }
     &:hover {

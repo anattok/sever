@@ -1,0 +1,57 @@
+.special {
+  padding-top: 76px;
+  padding-bottom: 44px;
+  &__title {
+    @extend%rubik-700;
+    font-size: 36px;
+    line-height: 150%;
+    margin-bottom: 40px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link:hover {
+    box-shadow: 0px 8px 16px rgba(202, 147, 96, 0.5);
+    border-radius: 4px;
+    transition: 0.2s;
+  }
+}
+.special-item {
+  padding-top: 30px;
+  border-radius: 4px;
+  width: 584px;
+  height: 200px;
+
+  &__title {
+    max-width: 260px;
+    margin-left: 40px;
+    margin-bottom: 6px;
+    font-size: 24px;
+    line-height: 150%;
+    @extend%rubik-700;
+    color: $surface-text;
+  }
+  &__subtitle {
+    max-width: 260px;
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 150%;
+    @extend%rubik-400;
+    color: $surface-text;
+  }
+  &--cart {
+    background-image: url("/images/specials/banner-x2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 584px;
+    height: 200px;
+  }
+  &--action {
+    background-image: url("/images/specials/banner-hover-x2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 584px;
+    height: 200px;
+  }
+}

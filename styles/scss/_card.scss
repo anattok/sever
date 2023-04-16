@@ -61,15 +61,19 @@
     width: 16px;
     height: 16px;
     background-image: url("/images/icons/star.svg");
-    background-size: cover;
-    margin-right: 4px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__rating-star + .card__rating-star {
+    margin-left: 4px;
   }
   &__rating-star--active {
     display: block;
     width: 16px;
     height: 16px;
     background-image: url("/images/icons/star-active.svg");
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   &__button {
     width: 256px;
