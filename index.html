@@ -11,53 +11,78 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header__wrapper">
-          <a href="#" class="logo"
-            ><img
-              class="logo__img-desctop"
-              src="./images/menu/icons/logo-desctop.svg"
-              alt="logo-desctop" />
-            <img
-              class="logo__img-tablet"
-              src="./images/menu/icons/logo-tablet.svg"
-              alt="logo-tablet"
-          /></a>
-          <button class="header__menu-btn"><span>Каталог</span></button>
-          <input type="text" class="header__search" placeholder="Найти товар" />
-          <div class="user">
-            <div class="user__wrapper">
-              <a href="#" class="user__btn user__favorite">
-                <img
-                  class="user__btn-icon"
-                  src="./images/menu/icons/like.svg"
-                  alt="favorite"
-                />
-                <span>Избранное</span>
-              </a>
-              <a href="#" class="user__btn user__orders">
-                <img
-                  class="user__btn-icon"
-                  src="./images/menu/icons/box.svg"
-                  alt="box"
-                />
-                <span>Заказы</span>
-              </a>
-              <a href="#" class="user__btn user__cart">
-                <img
-                  class="user__btn-icon"
-                  src="./images/menu/icons/shopping-cart.svg"
-                  alt="cart"
-                />
-                <span>Корзина</span>
-              </a>
-            </div>
-            <button class="user__login-btn"><span>Войти</span></button>
-          </div>
-        </div>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link"
+                ><picture class="menu__logo">
+                  <source
+                    class="menu__logo--desctop"
+                    media="(min-width:991px)"
+                    srcset="./images/menu/icons/logo-desctop.svg"
+                  />
+                  <img
+                    class="menu__logo--tablet"
+                    src="./images/menu/icons/logo-tablet.svg"
+                    alt="logo"
+                  /> </picture
+              ></a>
+            </li>
+            <li class="menu__item">
+              <button class="menu__btn-catalog btn">
+                <span>Каталог</span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <input
+                type="text"
+                class="menu__search"
+                placeholder="Найти товар"
+              />
+            </li>
+            <li class="menu__item user">
+              <ul class="user__list">
+                <li class="user__item">
+                  <a href="#" class="user__link user__favorite">
+                    <img
+                      class="user__link-icon"
+                      src="./images/menu/icons/like.svg"
+                      alt="favorite"
+                    />
+                    <span>Избранное</span>
+                  </a>
+                </li>
+                <li class="user__item">
+                  <a href="#" class="user__link user__orders">
+                    <img
+                      class="user__link-icon"
+                      src="./images/menu/icons/box.svg"
+                      alt="box"
+                    />
+                    <span>Заказы</span>
+                  </a>
+                </li>
+                <li class="user__item">
+                  <a href="#" class="user__link user__cart">
+                    <img
+                      class="user__link-icon"
+                      src="./images/menu/icons/shopping-cart.svg"
+                      alt="cart"
+                    />
+                    <span>Корзина</span>
+                  </a>
+                </li>
+                <li class="user__item">
+                  <button class="user__login-btn"><span>Войти</span></button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main class="main">
-      <section class="slider">
+      <!-- <section class="slider">
         <div class="slider__container">
           <div class="slider__item slider-item">
             <img
@@ -76,145 +101,163 @@
             <a href="#" class="promo__all all">Все акции</a>
           </div>
           <div class="promo__content">
-            <article class="card">
-              <img
-                class="card__img"
-                src="/images/products/product-1.webp"
-                alt="product"
-              />
-              <div class="card__main">
-                <div class="card__price">
-                  <div class="card__price-col card__price-left">
-                    <span class="card__price-with-digit">44,50</span>
-                    <span class="card__price-subtitle">С картой</span>
+            <ul class="card__list">
+              <li class="card__item">
+                <article class="card">
+                  <img
+                    class="card__img"
+                    src="/images/products/product-1.webp"
+                    alt="product"
+                  />
+                  <div class="card__main">
+                    <div class="card__price">
+                      <div class="card__price-col card__price-left">
+                        <span class="card__price-with-digit">44,50</span>
+                        <span class="card__price-subtitle">С картой</span>
+                      </div>
+                      <div class="card__price-col card__price-right">
+                        <span class="card__price-without-digit">50,50</span>
+                        <span class="card__price-subtitle">Обычная</span>
+                      </div>
+                    </div>
+                    <div class="card__title">
+                      Г/Ц Блинчики с мясом вес, Россия
+                    </div>
+                    <div class="card__raiting">
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span class="card__rating-star"></span>
+                      <span class="card__rating-star"></span>
+                    </div>
+                    <button class="card__button">В корзину</button>
                   </div>
-                  <div class="card__price-col card__price-right">
-                    <span class="card__price-without-digit">50,50</span>
-                    <span class="card__price-subtitle">Обычная</span>
+                </article>
+              </li>
+              <li class="card__item">
+                <article class="card">
+                  <img
+                    class="card__img"
+                    src="/images/products/product-1.webp"
+                    alt="product"
+                  />
+                  <div class="card__main">
+                    <div class="card__price">
+                      <div class="card__price-col card__price-left">
+                        <span class="card__price-with-digit">44,50</span>
+                        <span class="card__price-subtitle">С картой</span>
+                      </div>
+                      <div class="card__price-col card__price-right">
+                        <span class="card__price-without-digit">50,50</span>
+                        <span class="card__price-subtitle">Обычная</span>
+                      </div>
+                    </div>
+                    <div class="card__title">
+                      Г/Ц Блинчики с мясом вес, Россия
+                    </div>
+                    <div class="card__raiting">
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span class="card__rating-star"></span>
+                      <span class="card__rating-star"></span>
+                    </div>
+                    <button class="card__button">В корзину</button>
                   </div>
-                </div>
-                <div class="card__title">Г/Ц Блинчики с мясом вес, Россия</div>
-                <div class="card__raiting">
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span class="card__rating-star"></span>
-                  <span class="card__rating-star"></span>
-                </div>
-                <button class="card__button">В корзину</button>
-              </div>
-            </article>
-            <article class="card">
-              <img
-                class="card__img"
-                src="/images/products/product-1.webp"
-                alt="product"
-              />
-              <div class="card__main">
-                <div class="card__price">
-                  <div class="card__price-col card__price-left">
-                    <span class="card__price-with-digit">44,50</span>
-                    <span class="card__price-subtitle">С картой</span>
+                </article>
+              </li>
+              <li class="card__item">
+                <article class="card">
+                  <img
+                    class="card__img"
+                    src="/images/products/product-1.webp"
+                    alt="product"
+                  />
+                  <div class="card__main">
+                    <div class="card__price">
+                      <div class="card__price-col card__price-left">
+                        <span class="card__price-with-digit">44,50</span>
+                        <span class="card__price-subtitle">С картой</span>
+                      </div>
+                      <div class="card__price-col card__price-right">
+                        <span class="card__price-without-digit">50,50</span>
+                        <span class="card__price-subtitle">Обычная</span>
+                      </div>
+                    </div>
+                    <div class="card__title">
+                      Г/Ц Блинчики с мясом вес, Россия
+                    </div>
+                    <div class="card__raiting">
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span class="card__rating-star"></span>
+                      <span class="card__rating-star"></span>
+                    </div>
+                    <button class="card__button">В корзину</button>
                   </div>
-                  <div class="card__price-col card__price-right">
-                    <span class="card__price-without-digit">50,50</span>
-                    <span class="card__price-subtitle">Обычная</span>
+                </article>
+              </li>
+              <li class="card__item">
+                <article class="card">
+                  <img
+                    class="card__img"
+                    src="/images/products/product-1.webp"
+                    alt="product"
+                  />
+                  <div class="card__main">
+                    <div class="card__price">
+                      <div class="card__price-col card__price-left">
+                        <span class="card__price-with-digit">44,50</span>
+                        <span class="card__price-subtitle">С картой</span>
+                      </div>
+                      <div class="card__price-col card__price-right">
+                        <span class="card__price-without-digit">50,50</span>
+                        <span class="card__price-subtitle">Обычная</span>
+                      </div>
+                    </div>
+                    <div class="card__title">
+                      Г/Ц Блинчики с мясом вес, Россия
+                    </div>
+                    <div class="card__raiting">
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span
+                        class="card__rating-star card__rating-star--active"
+                      ></span>
+                      <span class="card__rating-star"></span>
+                      <span class="card__rating-star"></span>
+                    </div>
+                    <button class="card__button">В корзину</button>
                   </div>
-                </div>
-                <div class="card__title">Г/Ц Блинчики с мясом вес, Россия</div>
-                <div class="card__raiting">
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span class="card__rating-star"></span>
-                  <span class="card__rating-star"></span>
-                </div>
-                <button class="card__button">В корзину</button>
-              </div>
-            </article>
-            <article class="card">
-              <img
-                class="card__img"
-                src="/images/products/product-1.webp"
-                alt="product"
-              />
-              <div class="card__main">
-                <div class="card__price">
-                  <div class="card__price-col card__price-left">
-                    <span class="card__price-with-digit">44,50</span>
-                    <span class="card__price-subtitle">С картой</span>
-                  </div>
-                  <div class="card__price-col card__price-right">
-                    <span class="card__price-without-digit">50,50</span>
-                    <span class="card__price-subtitle">Обычная</span>
-                  </div>
-                </div>
-                <div class="card__title">Г/Ц Блинчики с мясом вес, Россия</div>
-                <div class="card__raiting">
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span class="card__rating-star"></span>
-                  <span class="card__rating-star"></span>
-                </div>
-                <button class="card__button">В корзину</button>
-              </div>
-            </article>
-            <article class="card">
-              <img
-                class="card__img"
-                src="/images/products/product-1.webp"
-                alt="product"
-              />
-              <div class="card__main">
-                <div class="card__price">
-                  <div class="card__price-col card__price-left">
-                    <span class="card__price-with-digit">44,50</span>
-                    <span class="card__price-subtitle">С картой</span>
-                  </div>
-                  <div class="card__price-col card__price-right">
-                    <span class="card__price-without-digit">50,50</span>
-                    <span class="card__price-subtitle">Обычная</span>
-                  </div>
-                </div>
-                <div class="card__title">Г/Ц Блинчики с мясом вес, Россия</div>
-                <div class="card__raiting">
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span
-                    class="card__rating-star card__rating-star--active"
-                  ></span>
-                  <span class="card__rating-star"></span>
-                  <span class="card__rating-star"></span>
-                </div>
-                <button class="card__button">В корзину</button>
-              </div>
-            </article>
+                </article>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="novelties">
         <div class="container">
           <div class="novelties__top">
@@ -619,8 +662,58 @@
           </ul>
         </div>
       </sections>
+      <nav class="menu-tablet">
+        <ul class="menu-tablet__list">
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__catalog-btn">
+              <img
+                class="menu-tablet__user-btn-icon"
+                src="./images/menu/icons/menu-dark.svg"
+                alt="favorite"
+              />
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <a
+              href="#"
+              class="menu-tablet__user-btn menu-tablet__user-favorite"
+            >
+              <img
+                class="menu-tablet__user-btn-icon"
+                src="./images/menu/icons/like.svg"
+                alt="favorite"
+              />
+              <span>Избранное</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__user-btn menu-tablet__user-orders">
+              <img
+                class="menu-tablet__user-btn-icon"
+                src="./images/menu/icons/box.svg"
+                alt="box"
+              />
+              <span>Заказы</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__user-btn menu-tablet__user-cart">
+              <img
+                class="menu-tablet__user-btn-icon"
+                src="./images/menu/icons/shopping-cart.svg"
+                alt="cart"
+              />
+              <span>Корзина</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <button class="menu-tablet__user-login-btn">
+              <span>Войти</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </main>
-
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -694,41 +787,5 @@
         </div>
       </div>
     </footer>
-    <div class="menu-tablet">
-      <a href="#" class="menu-tablet__user-btn menu-tablet__catalog-btn">
-        <img
-          class="menu-tablet__user-btn-icon"
-          src="./images/menu/icons/menu-dark.svg"
-          alt="favorite"
-        />
-        <span>Каталог</span>
-      </a>
-      <a href="#" class="menu-tablet__user-btn menu-tablet__user-favorite">
-        <img
-          class="menu-tablet__user-btn-icon"
-          src="./images/menu/icons/like.svg"
-          alt="favorite"
-        />
-        <span>Избранное</span>
-      </a>
-      <a href="#" class="menu-tablet__user-btn menu-tablet__user-orders">
-        <img
-          class="menu-tablet__user-btn-icon"
-          src="./images/menu/icons/box.svg"
-          alt="box"
-        />
-        <span>Заказы</span>
-      </a>
-      <a href="#" class="menu-tablet__user-btn menu-tablet__user-cart">
-        <img
-          class="menu-tablet__user-btn-icon"
-          src="./images/menu/icons/shopping-cart.svg"
-          alt="cart"
-        />
-        <span>Корзина</span>
-      </a>
-
-      <button class="menu-tablet__user-login-btn"><span>Войти</span></button>
-    </div>
   </body>
 </html>

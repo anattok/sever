@@ -1,0 +1,179 @@
+.menu {
+  &__list {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // &__logo {
+  //   display: block;
+  //   object-fit: cover;
+  //   &--desctop {
+  //     width: 152px;
+  //     height: 32px;
+  //   }
+  //   &--tablet {
+  //     width: 49px;
+  //     height: 40px;
+  //   }
+  //   // &--mobile {
+  //   //   width: 39px;
+  //   //   height: 32px;
+  //   // }
+  // }
+  &__btn-catalog {
+    width: 140px;
+    height: 40px;
+    color: $white;
+    background-color: $secondary;
+    padding: 8px 8px 8px 40px;
+    margin-left: 40px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    @extend%rubik-400;
+    font-size: 16px;
+    line-height: 150%;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      background-image: url("/images/menu/icons/menu.svg");
+      width: 24px;
+      height: 24px;
+      top: 8px;
+      left: 12px;
+    }
+  }
+  &__search {
+    width: 375px;
+    height: 40px;
+    background: $white;
+    border: 1px solid $secondary;
+    border-radius: 4px;
+    padding: 8px 42px 8px 16px;
+    margin-left: 16px;
+    color: $hard;
+    font-size: 16px;
+    line-height: 150%;
+    background-image: url("/images/menu/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 7px right 10px;
+  }
+}
+
+.user {
+  margin-left: 40px;
+  &__item + .user__item {
+    margin-left: 16px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: $surface-text;
+    font-size: 12px;
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__login-btn {
+    width: 157px;
+    height: 40px;
+    margin-left: 8px;
+    padding: 8px 40px 8px 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: $primary;
+    color: $white;
+    @extend%rubik-400;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+    &:hover {
+      background-color: $secondary;
+      transition: 0.2s;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("/images/menu/icons/log-in.svg");
+      width: 24px;
+      height: 24px;
+      top: 8px;
+      left: 120px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .menu {
+    padding: 0 20px;
+    &__search {
+      width: 336px;
+    }
+  }
+
+  .user {
+    margin-left: 20px;
+
+    &__login-btn {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      &:before {
+        left: 8px;
+      }
+    }
+    &__login-btn span {
+      display: none;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .menu {
+    &__btn-catalog {
+      margin-left: 20px;
+      width: 40px;
+      height: 40px;
+      padding: 0px;
+      &:before {
+        left: 8px;
+      }
+    }
+    &__btn-catalog span {
+      display: none;
+    }
+    &__login-btn {
+      margin-left: 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .user {
+    display: none;
+  }
+  .menu {
+    &__btn-catalog {
+      display: none;
+    }
+    &__search {
+      width: 258px;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .menu {
+    padding: 0 16px;
+  }
+}
