@@ -1,16 +1,21 @@
-@import "./scss/variables";
-@import "./scss/fonts";
-@import "./scss/config";
-@import "./scss/slider";
+@import "./scss/config/variables";
+@import "./scss/fonts/fonts";
+@import "./scss/config/config";
+@import "./scss/config/mixins";
+
+
 @import "./scss/header/header";
+@import "./scss/footer/footer";
+
 @import "./scss/menu/menu";
-@import "./scss/footer";
-@import "./scss/sections/promo";
-@import "./scss/sections/novelties";
-@import "./scss/sections/earlier";
-@import "./scss/sections/specials";
-@import "./scss/sections/map";
-@import "./scss/sections/articles";
-@import "./scss/footer";
-@import "./scss/card";
+@import "./scss/menu/menu-tablet";
+
+@import "./scss/sections/index/slider";
+@import "./scss/sections/index/promo";
+@import "./scss/sections/index/novelties";
+@import "./scss/sections/index/earlier";
+@import "./scss/sections/index/specials";
+@import "./scss/sections/index/map";
+@import "./scss/sections/index/articles";
+@import "./scss/sections/index/cards/card";
 

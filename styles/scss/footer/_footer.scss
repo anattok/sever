@@ -1,0 +1,134 @@
+.footer {
+  background-color: $footer-bg;
+  background-image: url("./images/footer/bg.svg");
+  &__inner {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer-menu {
+  // width: 740px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend%rubik-400;
+  font-size: 12px;
+  line-height: 150%;
+  &__item + .footer-menu__item {
+    margin-left: 40px;
+  }
+  &__logo-img {
+    display: block;
+    width: 64px;
+    height: 44px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+  }
+  &__link {
+    transition: 0.2s;
+    &:hover {
+      color: darken($hardest, 40%);
+      transition: 0.2s;
+    }
+  }
+}
+.footer-connection {
+  width: 336px;
+  display: flex;
+  justify-content: space-between;
+  &__list {
+    width: 144px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  // &__item + .footer-connection__item {
+  //   margin-left: 20px;
+  // }
+  &__tel {
+    display: block;
+    padding-left: 32px;
+    position: relative;
+    @extend%rubik-400;
+    font-size: 16px;
+    line-height: 150%;
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("/images/icons/phone.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      right: 125px;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .footer {
+    &__inner {
+      padding: 0 16px;
+    }
+    .footer-connection {
+      width: 232px;
+      &__list {
+        width: 60px;
+      }
+      &__item {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+      &__item:nth-child(2n) {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .footer-menu {
+    &__item + .footer-menu__item {
+      margin-left: 16px;
+    }
+    // &__list {
+    //   width: 311px;
+    // }
+    // &__item:nth-child(3){
+    //   width: 100%;
+    //   flex-grow: 3;
+    // }
+  }
+}
+@media (max-width: 992px) {
+  .footer-menu {
+    &__list {
+      width: 311px;
+    }
+    &__item:nth-child(3) {
+      margin-right: 60px;
+      margin-bottom: 8px;
+    }
+    &__item:nth-child(4) {
+      margin-left: 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding-bottom: $height-menu-tablet;
+  }
+}
+@media (max-width: 360px) {
+}

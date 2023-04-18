@@ -1,0 +1,64 @@
+.menu-tablet {
+  display: none;
+  &__list {
+    height: $height-menu-tablet;
+    padding: 8px 16px;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    line-height: 150%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  &__link {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &-icon {
+      width: 24px;
+      height: 24px;
+    }
+    & span {
+      display: block;
+      @extend%rubik-400;
+      font-size: 8px;
+      line-height: 150%;
+    }
+  }
+  &__login-btn {
+    @include button;
+    width: 40px;
+    height: 40px;
+    background-color: $primary;
+    color: $white;
+    border-radius: 4px;
+    position: relative;
+    transition: 0.2s;
+    &:hover {
+      background-color: $secondary;
+      transition: 0.2s;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("/images/menu/icons/log-in.svg");
+      width: 24px;
+      height: 24px;
+      top: 8px;
+      left: 8px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-tablet {
+    display: block;
+    width: 100%;
+    z-index: 50;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+}
