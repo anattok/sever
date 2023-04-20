@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Регистрация</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#" class="modal-reg">
+        <div class="modal-reg__top">
+          <h2 class="modal-reg__title">Регистрация</h2>
+          <p class="modal-reg__text">Обязательные поля</p>
+
+          <div class="modal-reg__top-main">
+            <label for="">Телефон<input type="tel" name="" id="" /></label>
+            <label for="">Фамилия <input type="text" /></label>
+            <label for="">Имя<input type="text" /></label>
+            <label for="">Пароль<input type="password" /></label>
+            <label for="">Повторите пароль<input type="password" /></label>
+            <label for=""
+              >Дата рождения<input type="date" name="" id=""
+            /></label>
+            <label for=""
+              >Регион
+              <div class="select">
+                <select name="" id="region">
+                  <option value="" id="region">
+                    Выберите населённый пункт
+                  </option>
+                  <option value="Коми">Коми</option>
+                  <option value="Усть-Ижма">Усть-Ижма</option>
+                  <option value="Усть-Ижма 2">Усть-Ижма 2</option>
+                </select>
+              </div>
+            </label>
+            <label for=""
+              >Населенный пункт
+              <div class="select">
+                <select class="select" name="" id="city">
+                <option value="" id="city">Выберите населённый пункт</option>
+                <option value="Коми">Коми</option>
+                <option value="Усть-Ижма">Усть-Ижма</option>
+                <option value="Усть-Ижма 2">Усть-Ижма 2</option>
+              </select>
+              </div>
+              
+            </label>
+            <label for="">Пол </label>
+          </div>
+        </div>
+        <div class="modal-reg__bottom">
+          <p class="modal-reg__text">Необязательные поля</p>
+          <div class="modal-reg__bottom-main">
+            <label for="">Номер карты<input type="text" /></label>
+            <label for="">E-mail<input type="email" /></label>
+
+            <div class="loyal">
+              <input id="card-loyal" type="checkbox" name="" />
+              <label class="loyal__label" for="card-loyal"></label>
+              <span>У меня нет карты лояльности</span>
+            </div>
+          </div>
+        </div>
+        <button class="modal-reg__btn-more" type="submit">Продолжить</button>
+        <button class="modal-reg__btn-login" type="submit">Вход</button>
+      </form>
+    </div>
+  </body>
+</html>
