@@ -40,15 +40,31 @@
               >Населенный пункт
               <div class="select">
                 <select class="select" name="" id="city">
-                <option value="" id="city">Выберите населённый пункт</option>
-                <option value="Коми">Коми</option>
-                <option value="Усть-Ижма">Усть-Ижма</option>
-                <option value="Усть-Ижма 2">Усть-Ижма 2</option>
-              </select>
+                  <option value="" id="city">Выберите населённый пункт</option>
+                  <option value="Коми">Коми</option>
+                  <option value="Усть-Ижма">Усть-Ижма</option>
+                  <option value="Усть-Ижма 2">Усть-Ижма 2</option>
+                </select>
               </div>
-              
             </label>
-            <label for="">Пол </label>
+
+            <div class="sex">
+              <span class="sex__title">Пол</span>
+            <div class="sex__wrap">
+              <div class="sex__row">
+                  <input class="sex__input" id="sex-man" type="radio" name="sex-radiobutton" checked/>
+                  <label class="sex__label" for="sex-man"><span>Мужской</span> </label>
+                </div>
+
+                <div class="sex__row">
+                  <input class="sex__input" id="sex-woman" type="radio" name="sex-radiobutton" button/>
+                  <label class="sex__label" for="sex-woman"><span>Женский</span></label>
+              </div>
+            </div>
+                
+
+            </div>
+
           </div>
         </div>
         <div class="modal-reg__bottom">
@@ -62,6 +78,7 @@
               <label class="loyal__label" for="card-loyal"></label>
               <span>У меня нет карты лояльности</span>
             </div>
+            
           </div>
         </div>
         <button class="modal-reg__btn-more" type="submit">Продолжить</button>

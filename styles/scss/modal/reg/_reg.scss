@@ -61,7 +61,7 @@
   }
 }
 label {
-  color: #8f8f8f;
+  color: $hard;
   @extend%rubik-400;
   font-size: 16px;
 }
@@ -105,7 +105,7 @@ select {
     z-index: 1;
   }
 }
-
+//кастомный чекбокс начало
 .loyal {
   display: flex;
   align-items: center;
@@ -115,7 +115,7 @@ select {
 
 .loyal input {
   opacity: 0;
-  z-index: 1;
+  // z-index: 1;
   width: 20px;
   height: 20px;
 }
@@ -134,9 +134,56 @@ select {
   background-size: content;
 }
 
-// #card-loyal:checked ~ .loyal__label {
-//     background-color: green;
-// }
-.loyal > span {
+.loyal span {
   margin-left: 8px;
+}
+
+.sex {
+  &__title{
+color: $hard;
+  }
+  &__wrap {
+    background: #f3f2f1;
+    display: flex;
+    border-radius: 4px;
+    width: 260px;
+    height: 40px;
+    padding: 4px;
+  }
+  &__row {
+    width: 126px;
+    height: 32px;
+    position: relative;
+  }
+}
+
+.sex__input {
+  opacity: 0;
+  z-index: 10;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 4px;
+}
+.sex__label {
+  width: 126px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+color: $surface-text;
+  border-radius: 4px;
+  position: absolute;
+}
+.sex__label span {
+  display: block;
+}
+
+.sex__input {
+  width: 126px;
+  height: 32px;
+}
+
+.sex__row input:checked ~ .sex__label {
+  background-color: #70c05b;
+  color: $white;
 }
