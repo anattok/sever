@@ -4,19 +4,20 @@
 @import "./scss/config/mixins";
 
 @import "./scss/header/header";
+@import "./scss/header/catalog-top/catalog-top";
 @import "./scss/footer/footer";
 
 @import "./scss/menu/menu";
 @import "./scss/menu/menu-tablet";
 
-@import "./scss/sections/index/slider";
-@import "./scss/sections/index/promo";
-@import "./scss/sections/index/novelties";
-@import "./scss/sections/index/earlier";
-@import "./scss/sections/index/specials";
-@import "./scss/sections/index/map";
-@import "./scss/sections/index/articles";
-@import "./scss/sections/index/cards/card";
+@import "./scss/cards/article-card";
+@import "./scss/cards/product-card";
+
+@import "./scss/sections/slider/slider";
+@import "./scss/sections/card-wrapper/card-wrapper";
+@import "./scss/sections/special/specials";
+@import "./scss/sections/map/map";
+@import "./scss/sections/articles/articles";
 
 @import "./scss/modal/reg/reg";
 

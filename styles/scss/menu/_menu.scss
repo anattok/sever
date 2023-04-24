@@ -5,22 +5,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  // &__logo {
-  //   display: block;
-  //   object-fit: cover;
-  //   &--desctop {
-  //     width: 152px;
-  //     height: 32px;
-  //   }
-  //   &--tablet {
-  //     width: 49px;
-  //     height: 40px;
-  //   }
-  //   // &--mobile {
-  //   //   width: 39px;
-  //   //   height: 32px;
-  //   // }
-  // }
   &__btn-catalog {
     width: 140px;
     height: 40px;
@@ -44,6 +28,9 @@
       height: 24px;
       top: 8px;
       left: 12px;
+    }
+    &:hover #catalog{
+      display: block;
     }
   }
   &__search {
