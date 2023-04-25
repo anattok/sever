@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <title>Северяночка</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link"
+                ><picture class="menu__logo">
+                  <source
+                    class="menu__logo--desctop"
+                    media="(min-width:991px)"
+                    srcset="./images/menu/icons/logo-desctop.svg"
+                  />
+                  <img
+                    class="menu__logo--tablet"
+                    src="./images/menu/icons/logo-tablet.svg"
+                    alt="logo"
+                  /> </picture
+              ></a>
+            </li>
+            <li class="menu__item">
+              <button class="menu__btn-catalog btn">
+                <span>Каталог</span>
+              </button>
+            </li>
+            <li class="menu__item">
+              <input
+                type="text"
+                class="menu__search"
+                placeholder="Найти товар"
+              />
+            </li>
+            <li class="menu__item user">
+              <ul class="user__list">
+                <li class="user__item">
+                  <a href="#" class="user__link user__favorite">
+                    <img
+                      class="user__link-icon"
+                      src="./images/menu/icons/like.svg"
+                      alt="favorite"
+                    />
+                    <span>Избранное</span>
+                  </a>
+                </li>
+                <li class="user__item">
+                  <a href="#" class="user__link user__orders">
+                    <img
+                      class="user__link-icon"
+                      src="./images/menu/icons/box.svg"
+                      alt="box"
+                    />
+                    <span>Заказы</span>
+                  </a>
+                </li>
+                <li class="user__item">
+                  <a href="#" class="user__link user__cart">
+                    <img
+                      class="user__link-icon"
+                      src="./images/menu/icons/shopping-cart.svg"
+                      alt="cart"
+                    />
+                    <span>Корзина</span>
+                  </a>
+                </li>
+                <li class="user__item">
+                  <button class="user__login-btn"><span>Войти</span></button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="catalog-top">
+      <div class="container">
+        <ul class="catalog-top__list">
+          <li class="catalog-top__item">
+            <ul class="catalog-top-item__list">
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link">Молоко, сыр, яйцо</a>
+              </li>
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link">Хлеб</a>
+              </li>
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link">Фрукты и овощи</a>
+              </li>
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link"
+                  >Замороженные продукты</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-top__item">
+            <ul class="catalog-top-item__list">
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link">Напитки</a>
+              </li>
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link"
+                  >Кондитерские изделия</a
+                >
+              </li>
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link">Чай, кофе</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-top__item">
+            <ul class="catalog-top-item__list">
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link">Бакалея</a>
+              </li>
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link">Здоровое питание</a>
+              </li>
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link">Зоотовары</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-top__item">
+            <ul class="catalog-top-item__list">
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link"
+                  >Непродовольственные товары</a
+                >
+              </li>
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link">Детское питание</a>
+              </li>
+              <li class="catalog-top-item__item">
+                <a href="" class="catalog-top-item__link"
+                  >Мясо, птица, колбаса</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="breadcrumps">
+      <div class="container">
+        <ul class="breadcrumps__list">
+          <li class="breadcrumps__item">Главная</li>
+          <li class="breadcrumps__item">Каталог</li>
+        </ul>
+      </div>
+      <section class="catalog">
+        <div class="container">
+          <h2 class="catalog__title">Каталог</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item catalog__milk">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/milk.webp" alt="milk" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__bread">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/bread.webp" alt="bread" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__fruits">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/fruits.webp" alt="fruits" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__frozen">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/frozen.webp" alt="frozen" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__drinks">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/drinks.webp" alt="drinks" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__conditer">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/conditer.webp" alt="conditer" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__tea">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/tea.webp" alt="tea" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__pasta">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/pasta.webp" alt="pasta" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__health">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/health.webp" alt="health" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__zoo">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/zoo.webp" alt="zoo" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__children">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/children.webp" alt="children" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__kolbasa">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/kolbasa.webp" alt="kolbasa" class="catalog__img">
+              </a>
+            </li>
+            <li class="catalog__item catalog__hozka">
+              <a href="" class="catalog__link">
+                <img src="./images/catalog/hozka.webp" alt="hozka" class="catalog__img">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

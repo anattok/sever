@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
   }
   &__btn-catalog {
     width: 140px;
@@ -28,9 +29,6 @@
       height: 24px;
       top: 8px;
       left: 12px;
-    }
-    &:hover #catalog{
-      display: block;
     }
   }
   &__search {
@@ -113,7 +111,6 @@
 
   .user {
     margin-left: 20px;
-
     &__login-btn {
       width: 40px;
       height: 40px;
