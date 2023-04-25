@@ -5,27 +5,112 @@
     grid-template-rows: repeat(4, 200px);
     grid-gap: 40px;
   }
-//   &__item {
-    
-//   }
-  &__link a{
+  &__item-bg {
+    height: 200px;
+    width: 100%;
     background: linear-gradient(
       180deg,
       rgba(112, 192, 91, 0) 0%,
       #70c05b 82.81%
     );
+    transition: 0.3s;
   }
+  // неправильно работает transitioin
+  &__item {
+    border-radius: 4px;
+    overflow: hidden;
+    &:hover .catalog__item-bg {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 102, 51, 0) 0%,
+        #ff6633 100%
+      );
+      transition: 0.3s;
+    }
+  }
+
   &__milk {
     grid-column-start: 1;
     grid-column-end: 3;
-    background-color: #fff;
+    background-image: url("/images/catalog/milk.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__bread {
+    background-image: url("/images/catalog/bread.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__fruits {
+    background-image: url("/images/catalog/fruits.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__frozen {
+    background-image: url("/images/catalog/frozen.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__drinks {
+    background-image: url("/images/catalog/drinks.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__conditer {
+    background-image: url("/images/catalog/conditer.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__tea {
+    background-image: url("/images/catalog/tea.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__pasta {
+    background-image: url("/images/catalog/pasta.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__health {
+    background-image: url("/images/catalog/health.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   &__zoo {
     grid-column-start: 3;
     grid-column-end: 5;
+    background-image: url("/images/catalog/zoo.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__children {
+    background-image: url("/images/catalog/children.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   &__kolbasa {
     grid-column-start: 2;
     grid-column-end: 4;
+    background-image: url("/images/catalog/kolbasa.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__hozka {
+    background-image: url("/images/catalog/hozka.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
