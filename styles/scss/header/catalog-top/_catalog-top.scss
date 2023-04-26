@@ -8,6 +8,7 @@
   transition: 0.9s;
   padding-top:102px;
   padding-bottom: 40px;
+  z-index: 99;
   &--active {
     transform: translateY(0);
     transition: 0.9s;

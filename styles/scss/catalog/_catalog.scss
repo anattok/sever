@@ -1,9 +1,13 @@
 .catalog {
+  &__title{
+    margin-bottom: 60px;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 272px);
     grid-template-rows: repeat(4, 200px);
     grid-gap: 40px;
+    margin-bottom: 80px;
   }
   &__item-bg {
     height: 200px;

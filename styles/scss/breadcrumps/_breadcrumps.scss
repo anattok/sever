@@ -1,0 +1,23 @@
+.breadcrumps {
+  margin: 27px 0;
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      background-image: url("/images/icons/arrow-right.svg");
+      width: 8px;
+      height: 13px;
+      top: 2px;
+      right: -30px;
+    }
+  }
+  &__item:last-child a{
+    color: $hard;
+    pointer-events: none;
+  }
+}
