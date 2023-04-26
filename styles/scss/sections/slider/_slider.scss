@@ -5,6 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  display: flex;
+  align-items: center;
+  align-items: flex-end;
   &__container {
     max-width: 1080px;
     margin: 0 auto;
@@ -14,6 +17,8 @@
   display: flex;
   align-items: center;
   &__img {
+    display: block;
+    object-fit: cover;
     width: 303px;
     height: 202px;
   }
@@ -23,5 +28,35 @@
     line-height: 150%;
     color: $surface-text;
     margin-left: 18px;
+  }
+}
+@media (max-width: 1199px) {
+  .slider {
+    height: 160px;
+  }
+  .slider-item {
+    &__text {
+      font-size: 24px;
+    }
+    &__img {
+      width: 198px;
+      height: 132px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    align-items: center;
+  }
+  .slider-item {
+    &__img {
+      display: none;
+    }
+    &__text {
+      @extend%rubik-700;
+      font-size: 18px;
+      color: $surface-text;
+    }
   }
 }

@@ -2,115 +2,104 @@ const MILK = [
   {
     name: "Молоко ''Простоквашино'' Отборное пастеризованное 3,4-4,5%, 930 мл",
     picture: "https://photobank.dixy.ru/images/DI00081046/small.png",
-    price: 100,
+    price: 89.9,
+    brand: "Простоквашино",
   },
 
   {
     name: "Пирожное ''Медвежонок Барни'' бисквитное с молоком, 150 г",
     picture: "https://photobank.dixy.ru/images/2000223611/small.png",
-    price: 100,
+    price: 114.9,
   },
 
   {
     name: "Йогурт ''Коломенское молоко'' черника-Малина-Манго 5%, 170 г",
     picture: "https://photobank.dixy.ru/images/2000416334/small.png",
-    price: 100,
+    price: 59.9,
   },
 
   {
     name: "Йогурт ''Коломенское молоко'' малина-груша 5%,170 г",
     picture: "https://photobank.dixy.ru/images/2000416333/small.png",
-    price: 100,
+    price: 59.9,
   },
 
   {
     name: "Йогурт ''Коломенское молоко'' клубника-банан 5%,170 г",
     picture: "https://photobank.dixy.ru/images/2000416332/small.png",
-    price: 100,
+    price: 59.9,
   },
 
   {
     name: "Ряженка ''Домик в деревне'' Топленое молоко, 2,5%, 270 г",
     picture: "https://photobank.dixy.ru/images/2000536771/small.png",
-    price: 100,
+    price: 79.9,
   },
 
   {
     name: "Молоко ''Село Зеленое'', 3,2%, 2 кг",
     picture: "https://photobank.dixy.ru/images/2000509793/small.png",
-    price: 100,
+    price: 115.5,
   },
 
   {
     name: "Молоко ''Parmalat'' ультрапастеризованное 3,5%, 1 л",
     picture: "https://photobank.dixy.ru/images/2000328874/small.jpg",
-    price: 100,
+    price: 160,
   },
 
   {
     name: "Молоко ''С нашей фермы'', ультрапастеризованное, 3,2%, 925 л",
     picture: "https://photobank.dixy.ru/images/2000560951/small.png",
-    price: 100,
+    price: 98,
   },
 
   {
     name: "Молоко ''Му-у'', ультрапастеризованное, 2,5%, 925 мл",
     picture: "https://photobank.dixy.ru/images/2000511374/small.png",
-    price: 100,
+    price: 90,
   },
 
   {
     name: "Молоко ультрапастеризованное ''Домик в деревне'' 3,2%, 950 г",
     picture: "https://photobank.dixy.ru/images/2000066819/small.png",
-    price: 100,
+    price: 98,
   },
 
   {
     name: "Молоко ''Село Зеленое'' ультрапастеризованное, 2,5%, 0,95 л",
     picture: "https://photobank.dixy.ru/images/2000263555/small.png",
-    price: 100,
+    price: 110,
   },
 
   {
     name: "Молоко ''Parmalat'' безлактозное 1,8%, 1 л",
     picture: "https://photobank.dixy.ru/images/2000328870/small.jpg",
-    price: 100,
+    price: 160,
   },
 
   {
     name: "Молоко сгущенное ''Алексеевское'', цельное с сахаром, 8,5%, 100 г",
     picture: "https://photobank.dixy.ru/images/2000214301/small.png",
-    price: 100,
+    price: 130,
   },
 
   {
     name: "Молоко сгущенное ''Алексеевское'' с сахаром 8,5% сашет, 650 г",
     picture: "https://photobank.dixy.ru/images/2000165425/small.jpg",
-    price: 100,
-  },
-
-  {
-    name: "Вафли ''Коровка'' Топленое молоко, 50 г",
-    picture: "https://photobank.dixy.ru/images/2000189286/small.png",
-    price: 100,
-  },
-
-  {
-    name: "Печенье сахарное ''Любятово'' Топленое молоко, 267 г",
-    picture: "https://photobank.dixy.ru/images/2000547094/small.png",
-    price: 100,
+    price: 130,
   },
 
   {
     name: "Молоко ''Тёма'' детское ультрапастеризованное, 3,2%, 200 мл",
     picture: "https://photobank.dixy.ru/images/ЦТ0027977/small.jpg",
-    price: 100,
+    price: 45.9,
   },
 
   {
     name: "Молоко стерилизованное ''Агуша'' 4ВитЙод 2,5% с 8 месяцев, 200 мл",
     picture: "https://photobank.dixy.ru/images/2000002675/small.png",
-    price: 100,
+    price: 56.9,
   },
 ];
 const VEGETABLES = [
