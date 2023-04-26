@@ -10,16 +10,15 @@
 @import "./scss/menu/menu";
 @import "./scss/menu/menu-tablet";
 
-@import "./scss/cards/article-card";
-@import "./scss/cards/product-card";
-
 @import "./scss/catalog/catalog";
 
 @import "./scss/sections/slider/slider";
 @import "./scss/sections/card-wrapper/card-wrapper";
+@import "./scss/sections/card-wrapper/cards/product-card";
 @import "./scss/sections/special/specials";
 @import "./scss/sections/map/map";
 @import "./scss/sections/articles/articles";
+@import "./scss/sections/articles/cards/article-card";
 
 @import "./scss/modal/reg/reg";
 
