@@ -7,12 +7,7 @@
     align-items: center;
     margin-bottom: 40px;
   }
-  &__title {
-    @extend%rubik-700;
-    font-size: 36px;
-    line-height: 150%;
-    color: $surface-text;
-  }
+
   &__all-actions {
     padding: 8px 40px 8px 8px;
     @extend%rubik-400;

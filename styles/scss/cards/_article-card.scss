@@ -1,95 +1,94 @@
-.card {
-  width: 272px;
-  background-color: $white;
+.articles-item {
+  max-width: 376px;
+  height: 100%;
+  background: $white;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  overflow: hidden;
+
   &__img {
-    width: 272px;
-    height: 160px;
-    margin-bottom: 8px;
-  }
-  &__price {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-  }
-  &__price-left {
-    text-align: left;
-  }
-  &__price-right {
-    text-align: right;
+    display: block;
+    width: 100%;
+    height: 162px;
+    object-fit: cover;
+    background-color: $warning;
   }
   &__main {
-    padding: 8px;
-  }
-  &__price-col {
+    padding: 10px;
     display: flex;
     flex-direction: column;
+    flex: 1;
   }
-  &__price-with-digit {
-    font-weight: 700;
+  &__date {
+    display: block;
+    @extend%rubik-400;
+    font-size: 12px;
+    line-height: 150%;
+    color: $hard;
+    margin-bottom: 10px;
+  }
+  &__title {
+    margin-bottom: 10px;
+    @extend%rubik-700;
     font-size: 18px;
     line-height: 150%;
     color: $surface-text;
-  }
-  &__price-without-digit {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: $hardest;
-  }
-  &__price-subtitle {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
-    color: $light;
-  }
-  &__title {
-    margin-bottom: 8px;
-    height: 48px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
+    overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
-  &__raiting {
-    margin-bottom: 8px;
-    display: flex;
+  &__text {
+    max-height: 120px;
+    margin-bottom: 10px;
+    @extend%rubik-400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $surface-text;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
   }
-  &__rating-star {
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-image: url("/images/icons/star.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__rating-star + .card__rating-star {
-    margin-left: 4px;
-  }
-  &__rating-star--active {
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-image: url("/images/icons/star-active.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__button {
-    width: 256px;
+  &__btn {
+    width: 150px;
     height: 40px;
-    border-radius: 4px;
-    text-align: center;
-    background-color: transparent;
+    background-color: $secondary-lite;
     color: $secondary;
-    border: 1px solid $secondary;
+    @extend%rubik-400;
+    font-size: 16px;
+    line-height: 150%;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    margin-top: auto;
     transition: 0.2s;
+
     &:hover {
+      background-color: $secondary;
       color: $white;
-      background-color: $primary;
-      border: 1px solid $primary;
       transition: 0.2s;
+    }
+  }
+  &:hover {
+    box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+    transition: 0.2s;
+  }
+}
+@media (max-width: 600px) {
+  .articles-item {
+    max-width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  .articles-item {
+    &__img {
+      height: 102px;
     }
   }
 }

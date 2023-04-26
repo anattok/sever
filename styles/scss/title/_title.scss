@@ -1,0 +1,11 @@
+.title {
+  @extend%rubik-700;
+  font-size: 36px;
+  color: $surface-text;
+}
+
+@media (max-width: 1199px) {
+  .title {
+    font-size: 24px;
+  }
+}
