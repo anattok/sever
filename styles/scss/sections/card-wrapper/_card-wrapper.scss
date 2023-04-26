@@ -43,10 +43,34 @@
 }
 
 @media (max-width: 1199px) {
+  .card-wrapper {
+    padding-top: 64px;
+    padding-bottom: 40px;
+    &__top {
+      margin-bottom: 32px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+  }
 }
+
 @media (max-width: 992px) {
+  .cards {
+    &__item:last-child {
+      display: none;
+    }
+  }
 }
+
 @media (max-width: 768px) {
-}
-@media (max-width: 360px) {
+
+  .cards {
+    &__list{
+      flex-wrap: wrap;
+    }
+    &__item:last-child {
+      display: block;
+    }
+  }
 }
