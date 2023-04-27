@@ -67,37 +67,39 @@
     cursor: pointer;
   }
 }
-label {
-  color: $hard;
-  @extend%rubik-400;
-  font-size: 16px;
-}
+//указать классы иначе перебиваются стили
 
-input,
-select {
-  width: 260px;
-  height: 40px;
-  padding: 8px 6px 8px 16px;
-  border: 1px solid #bfbfbf;
-  color: #414141;
-  border-radius: 4px;
-  @extend%rubik-400;
-  font-size: 16px;
-  background-color: transparent;
-  &:focus {
-    border: 1px solid #70c05b;
-    box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
-  }
-}
-select {
-  padding: 8px 36px 8px 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-  display: inline-block;
-  z-index: 2;
-}
+// label {
+//   color: $hard;
+//   @extend%rubik-400;
+//   font-size: 16px;
+// }
+
+// input,
+// select {
+//   width: 260px;
+//   height: 40px;
+//   padding: 8px 6px 8px 16px;
+//   border: 1px solid #bfbfbf;
+//   color: #414141;
+//   border-radius: 4px;
+//   @extend%rubik-400;
+//   font-size: 16px;
+//   background-color: transparent;
+//   &:focus {
+//     border: 1px solid #70c05b;
+//     box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+//   }
+// }
+// select {
+//   padding: 8px 36px 8px 16px;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+//   position: relative;
+//   display: inline-block;
+//   z-index: 2;
+// }
 .select {
   position: relative;
   &:after {

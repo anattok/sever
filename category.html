@@ -189,6 +189,54 @@
           </ul>
         </div>
       </div>
+      <section class="category">
+        <div class="container">
+          <h2 class="category__title title">title</h2>
+          <div class="category__filters"></div>
+          <div class="category__wrapper">
+            <div class="category-aside">
+              <h3 class="category-aside__title">Фильтр</h3>
+              <div class="category-aside__row">
+                <span class="category-aside__text">Цена</span>
+                <button class="category-aside__btn-clear">Очистить</button>
+              </div>
+              <form action="" class="category-form">
+                <div class="category-form__row">
+                  <input type="text" class="category-form__min-price" />
+                  <span>-</span>
+                  <input type="text" class="category-form__max-price" />
+                </div>
+                <input
+                  class="category-form__range"
+                  type="range"
+                  name=""
+                  id=""
+                />
+                <div class="category-form__checkbox-wrap">
+                  <div class="category-form__checkbox">
+                    <input
+                      class="category-form__checkbox__input"
+                      type="checkbox"
+                      name=""
+                      id=""
+                    />
+                    <label
+                      for=""
+                      class="category-form__checkbox__label"
+                    ></label>
+                  </div>
+                  <span>В наличии</span>
+                </div>
+                <button class="category-form__submit">Применить</button>
+              </form>
+            </div>
+            <div class="category__columns">
+              <div class="category__active-filters"></div>
+              <div class="category__items"></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <nav class="menu-tablet">
         <ul class="menu-tablet__list">
           <li class="menu-tablet__item">
@@ -237,7 +285,6 @@
         </ul>
       </nav>
     </main>
-
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -312,5 +359,8 @@
       </div>
     </footer>
     <script src="./js/index.js"></script>
+    <script src="./js/catalog/catalog.js"></script>
+    <script src="./js/category/category.js"></script>
+    <script src="./js/catalog-top/catalogTop.js"></script>
   </body>
 </html>
