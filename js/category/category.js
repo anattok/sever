@@ -1,19 +1,22 @@
 const categoryList = document.querySelector(".category__items");
 
 const render = (category) => {
-    let htmlCatalog = "";
+  let htmlCatalog = "";
 
-    category.forEach(({ name, picture, price }) => {
-      htmlCatalog += `
+  category.forEach(({ name, picture, price }) => {
+    htmlCatalog += `
     
               <li class="cards__item">
                 <article class="product-card">
                   <div class="product-card__top">
-                    <img
+                  <div class="product-card__img-wrap">
+                  <img
                       class="product-card__img"
                       src="${picture}"
                       alt="product name"
                     />
+                    </div>
+                    
                     <button class="product-card__favorite"></button>
                     <span class="product-card__sale">-50%</span>
                   </div>
@@ -63,15 +66,15 @@ const render = (category) => {
               </li>
               
     `;
-    });
+  });
 
-    const html = `
+  const html = `
     <ul class="cards__list">
         ${htmlCatalog}
     </ul>
     `;
 
-    categoryList.innerHTML = html;
-}
-    
-render(FROZEN);
+  categoryList.innerHTML = html;
+};
+
+render(BREAD);

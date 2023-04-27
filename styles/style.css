@@ -1,4 +1,4 @@
-.loyal, .modal-reg, .articles-item__btn, .articles-item__text, .articles-item__date, .articles__all, .map__button, .specials-offer__subtitle, .product-card__button, .product-card__title, .product-card__price-subtitle, .product-card__price-without-digit, .card-wrapper__all-actions, .category-form__submit, .category-aside__btn-clear, .menu-tablet__login-btn, .menu-tablet__link span, .user__login-btn, .menu__btn-catalog, .footer-list {
+.form-reg__input, .form-reg__select-region, .form-reg__select-city, .form-reg__label, .articles-item__btn, .articles-item__text, .articles-item__date, .articles__all, .map__button, .specials-offer__subtitle, .product-card__button, .product-card__title, .product-card__price-subtitle, .product-card__price-without-digit, .card-wrapper__all-actions, .category-form__submit, .category-aside__btn-clear, .menu-tablet__login-btn, .menu-tablet__link span, .user__login-btn, .menu__btn-catalog, .footer-list {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
@@ -17,14 +17,14 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/Rubik-Regular.woff2") format("woff2"), url("../fonts/Rubik-Regular.woff") format("woff");
+  src: url("../../fonts/Rubik-Regular.woff2") format("woff2"), url("../../fonts/Rubik-Regular.woff") format("woff");
 }
 /* rubik-700 - latin */
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Rubik-Bold.woff2") format("woff2"), url("../fonts/Rubik-Bold.woff") format("woff");
+  src: url("../../fonts/Rubik-Bold.woff2") format("woff2"), url("../../fonts/Rubik-Bold.woff") format("woff");
 }
 * {
   box-sizing: border-box;
@@ -70,6 +70,16 @@ a {
   font-size: 36px;
   line-height: 150%;
   color: #414141;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(252, 213, 186, 0.8);
+  z-index: 1000;
 }
 
 .header {
@@ -500,7 +510,6 @@ a {
   height: 200px;
   width: 100%;
   background: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70c05b 82.81%);
-  transition: 0.3s;
 }
 .catalog__item {
   border-radius: 4px;
@@ -508,7 +517,6 @@ a {
 }
 .catalog__item:hover .catalog__item-bg {
   background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #ff6633 100%);
-  transition: 0.3s;
 }
 .catalog__milk {
   grid-column-start: 1;
@@ -779,9 +787,9 @@ a {
 }
 
 .cards__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 272px);
+  gap: 40px;
 }
 
 @media (max-width: 1199px) {
@@ -819,7 +827,6 @@ a {
   border-radius: 4px;
   overflow: hidden;
   transition: 0.3s;
-  margin-bottom: 40px;
 }
 .product-card:hover {
   box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
@@ -862,12 +869,22 @@ a {
   padding: 4px 8px;
   border-radius: 4px;
 }
-.product-card__img {
-  display: block;
+.product-card__img-wrap {
   width: 100%;
   height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.product-card__img {
+  display: block;
+  width: 70%;
+  height: 80%;
   -o-object-fit: contain;
      object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
   background-color: #fff;
 }
 .product-card__main {
@@ -903,6 +920,7 @@ a {
   color: #bfbfbf;
 }
 .product-card__title {
+  min-height: 48px;
   font-size: 16px;
   color: #414141;
   margin-bottom: 8px;
@@ -1276,22 +1294,27 @@ a {
     height: 102px;
   }
 }
-.modal-wrapper-reg {
-  display: none;
+.modal-reg__exit {
   position: absolute;
-  z-index: 100;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  background-color: #f3f2f1;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: url("/images/icons/x.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-
-.modal-reg {
+.modal-reg__form {
+  position: relative;
   width: 687px;
   height: 998px;
-  padding: 72px 67.5px 40px;
-  box-shadow: 8px 16px 32px rgba(255, 102, 51, 0.2);
-  border-radius: 4px;
+  margin: 0 auto;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 72px 67.5px 46px;
 }
 .modal-reg__title {
   text-align: center;
@@ -1305,7 +1328,8 @@ a {
   font-size: 18px;
   color: #414141;
 }
-.modal-reg__top-main {
+
+.form-reg__wrapper {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: repeat(2, 260px);
@@ -1315,18 +1339,109 @@ a {
   row-gap: 16px;
   margin-bottom: 40px;
 }
-.modal-reg__bottom-main {
-  display: grid;
-  grid-template-columns: repeat(2, 260px);
-  -moz-column-gap: 32px;
-       column-gap: 32px;
-  row-gap: 16px;
-  margin-bottom: 40px;
+.form-reg__label {
+  height: 64px;
+  color: #8f8f8f;
+  font-size: 16px;
 }
-.modal-reg__btn-more {
+.form-reg__label-pass {
+  position: relative;
+}
+.form-reg__label-btn {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 32px;
+  right: 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url("/images/checkbox/eye-off.svg");
+  background-size: cover;
+}
+.form-reg__select-wrap {
+  position: relative;
+  z-index: 2;
+}
+.form-reg__select-wrap:before {
+  position: absolute;
+  content: "";
+  background-image: url("/images/checkbox/aroow-down.svg");
+  width: 13px;
+  height: 8px;
+  top: 16.5px;
+  right: 16.5px;
+  z-index: 1;
+}
+.form-reg__input, .form-reg__select-region, .form-reg__select-city {
+  width: 260px;
+  height: 40px;
+  padding: 8px 6px 8px 16px;
+  border: 1px solid #bfbfbf;
+  color: #414141;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+}
+.form-reg__input:focus, .form-reg__select-region:focus, .form-reg__select-city:focus {
+  border: 1px solid #70c05b;
+  box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+}
+.form-reg__select-region, .form-reg__select-city {
+  display: block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+}
+.form-reg__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.form-reg__checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 42px;
+  display: flex;
+}
+.form-reg__checkbox span {
+  display: block;
+  margin-left: 8px;
+  color: #8f8f8f;
+}
+.form-reg__checkbox :checked ~ .form-reg__checkbox-label {
+  background-color: #70c05b;
+  background-image: url("/images/checkbox/ok.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: content;
+}
+.form-reg__checkbox-input {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  position: absolute;
+}
+.form-reg__checkbox-label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-reg__btn-more {
+  display: block;
+  margin: 0 auto;
   width: 260px;
   height: 68px;
-  background: #fcd5ba;
+  background: #FCD5BA;
   border: none;
   border-radius: 4px;
   font-size: 24px;
@@ -1334,7 +1449,9 @@ a {
   cursor: pointer;
   color: #ff6633;
 }
-.modal-reg__btn-login {
+.form-reg__btn-login {
+  display: block;
+  margin: 0 auto;
   width: 121px;
   height: 32px;
   border: 1px solid #70c05b;
@@ -1343,100 +1460,35 @@ a {
   border-radius: 4px;
   cursor: pointer;
 }
-
-.select {
-  position: relative;
-}
-.select:after {
-  position: absolute;
-  content: "";
-  background-image: url("/images/checkbox/aroow-down.svg");
-  width: 13px;
-  height: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 13.5px;
-  z-index: 1;
-}
-
-.loyal {
+.form-reg__sex-radios {
+  background-color: #f3f2f1;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  font-size: 16px;
-}
-
-.loyal input {
-  opacity: 0;
-  width: 20px;
-  height: 20px;
-}
-
-.loyal label {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #bfbfbf;
-  border-radius: 4px;
-  position: absolute;
-}
-
-.loyal input:checked ~ .loyal__label {
-  background-color: #70c05b;
-  background-image: url(/images/checkbox/ok.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: content;
-}
-
-.loyal span {
-  margin-left: 8px;
-}
-
-.sex__title {
-  color: #8f8f8f;
-}
-.sex__wrap {
-  background: #f3f2f1;
-  display: flex;
-  border-radius: 4px;
-  width: 260px;
-  height: 40px;
   padding: 4px;
 }
-.sex__row {
+.form-reg__sex-radios:focus {
+  border: 1px solid #70c05b;
+  box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+}
+.form-reg__sex-radio {
   width: 126px;
   height: 32px;
-  position: relative;
-}
-
-.sex__input {
-  opacity: 0;
-  z-index: 10;
-  cursor: pointer;
   position: absolute;
-  border-radius: 4px;
 }
-
-.sex__label {
-  width: 126px;
-  height: 32px;
+.form-reg__sex-radio:checked ~ .form-reg__sex-label {
+  background-color: #70c05b;
+  color: #fff;
+}
+.form-reg__sex-label {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #414141;
-  border-radius: 4px;
-  position: absolute;
-}
-
-.sex__label span {
-  display: block;
-}
-
-.sex__input {
   width: 126px;
   height: 32px;
-}
-
-.sex__row input:checked ~ .sex__label {
-  background-color: #70c05b;
-  color: #fff;
+  background-color: transparent;
+  position: relative;
+  border-radius: 4px;
+  color: #414141;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

@@ -7,29 +7,29 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./images/favicon/apple-touch-icon.png"
+      href="./../images/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon/favicon-32x32.png"
+      href="./../images/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./images/favicon/favicon-16x16.png"
+      href="./../images/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="./images/favicon/site.webmanifest" />
+    <link rel="manifest" href="./../images/favicon/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="./images/favicon/safari-pinned-tab.svg"
+      href="./../images/favicon/safari-pinned-tab.svg"
       color="#f2f2f2"
     />
     <meta name="msapplication-TileColor" content="#202124" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./../styles/style.css" />
     <title>Северяночка</title>
   </head>
   <body>
@@ -43,11 +43,11 @@
                   <source
                     class="menu__logo--desctop"
                     media="(min-width:991px)"
-                    srcset="./images/menu/icons/logo-desctop.svg"
+                    srcset="./../images/menu/icons/logo-desctop.svg"
                   />
                   <img
                     class="menu__logo--tablet"
-                    src="./images/menu/icons/logo-tablet.svg"
+                    src="./../images/menu/icons/logo-tablet.svg"
                     alt="logo"
                   /> </picture
               ></a>
@@ -70,7 +70,7 @@
                   <a href="#" class="user__link user__favorite">
                     <img
                       class="user__link-icon"
-                      src="./images/menu/icons/like.svg"
+                      src="./../images/menu/icons/like.svg"
                       alt="favorite"
                     />
                     <span>Избранное</span>
@@ -80,7 +80,7 @@
                   <a href="#" class="user__link user__orders">
                     <img
                       class="user__link-icon"
-                      src="./images/menu/icons/box.svg"
+                      src="./../images/menu/icons/box.svg"
                       alt="box"
                     />
                     <span>Заказы</span>
@@ -90,7 +90,7 @@
                   <a href="#" class="user__link user__cart">
                     <img
                       class="user__link-icon"
-                      src="./images/menu/icons/shopping-cart.svg"
+                      src="./../images/menu/icons/shopping-cart.svg"
                       alt="cart"
                     />
                     <span>Корзина</span>
@@ -189,117 +189,138 @@
           </ul>
         </div>
       </div>
-      <section class="catalog">
+      <section class="category">
         <div class="container">
-          <h2 class="catalog__title title">Каталог</h2>
-          <ul class="catalog__list">
-            <li class="catalog__item catalog__milk">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__bread">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__fruits">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__frozen">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__drinks">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__conditer">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__tea">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__pasta">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__health">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__zoo">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__children">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__kolbasa">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-            <li class="catalog__item catalog__hozka">
-              <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
-              </a>
-            </li>
-          </ul>
+          <h2 class="category__title title">title</h2>
+          <div class="category__filters"></div>
+          <div class="category__wrapper">
+            <div class="category-aside">
+              <h3 class="category-aside__title">Фильтр</h3>
+              <div class="category-aside__row">
+                <span class="category-aside__text">Цена</span>
+                <button class="category-aside__btn-clear">Очистить</button>
+              </div>
+              <form action="" class="category-form">
+                <div class="category-form__row">
+                  <input type="text" class="category-form__min-price" />
+                  <span>-</span>
+                  <input type="text" class="category-form__max-price" />
+                </div>
+                <input
+                  class="category-form__range"
+                  type="range"
+                  name=""
+                  id=""
+                />
+                <div class="category-form__checkbox-wrap">
+                  <div class="category-form__checkbox">
+                    <input
+                      class="category-form__checkbox__input"
+                      type="checkbox"
+                      name=""
+                      id=""
+                    />
+                    <label
+                      for=""
+                      class="category-form__checkbox__label"
+                    ></label>
+                  </div>
+                  <span>В наличии</span>
+                </div>
+                <button class="category-form__submit">Применить</button>
+              </form>
+            </div>
+            <div class="category__columns">
+              <div class="category__active-filters"></div>
+              <div class="category__items"></div>
+            </div>
+          </div>
         </div>
       </section>
+      <nav class="menu-tablet">
+        <ul class="menu-tablet__list">
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__link menu-tablet__catalog-btn">
+              <img
+                class="menu-tablet__link-icon"
+                src="./../images/menu/icons/menu-dark.svg"
+                alt="favorite"
+              />
+              <span>Каталог</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__link menu-tablet__user-favorite">
+              <img
+                class="menu-tablet__link-icon"
+                src="./../images/menu/icons/like.svg"
+                alt="favorite"
+              />
+              <span>Избранное</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__link menu-tablet__user-orders">
+              <img
+                class="menu-tablet__link-icon"
+                src="./../images/menu/icons/box.svg"
+                alt="box"
+              />
+              <span>Заказы</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__link menu-tablet__user-cart">
+              <img
+                class="menu-tablet__link-icon"
+                src="./../images/menu/icons/shopping-cart.svg"
+                alt="cart"
+              />
+              <span>Корзина</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <button class="menu-tablet__login-btn"></button>
+          </li>
+        </ul>
+      </nav>
     </main>
-
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer__wrapper">
-            <div class="footer__row">
-              <a href="#" class="footer-menu__logo">
-                <img
-                  class="footer-menu__logo-img"
-                  src="./images/logo-bottom.svg"
-                  alt="logo-bottom"
-                />
-              </a>
-              <ul class="footer-list">
-                <li class="footer-list__item">
-                  <a href="#">О компании</a>
-                </li>
-                <li class="footer-list__item">
-                  <a href="#">Контакты</a>
-                </li>
-                <li class="footer-list__item">
-                  <a href="#">Вакансии</a>
-                </li>
-                <li class="footer-list__item">
-                  <a href="#">Статьи</a>
-                </li>
-                <li class="footer-list__item">
-                  <a href="#">Политика обработки персональных данных</a>
-                </li>
-              </ul>
-            </div>
+            <a href="#" class="footer-menu__logo">
+              <img
+                class="footer-menu__logo-img"
+                src="./../images/logo-bottom.svg"
+                alt="logo-bottom"
+              />
+            </a>
+
+            <ul class="footer-list">
+              <li class="footer-list__item">
+                <a href="#">О компании</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">Контакты</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">Вакансии</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">Статьи</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">Политика обработки персональных данных</a>
+              </li>
+            </ul>
 
             <div class="footer-connection">
               <ul class="footer-connection__list">
                 <li class="footer-connection__item">
-                  <a href="" class="footer-connection__link">
-                    <img
-                      src="./images/icons/inst.svg"
+                  <a href="" class="footer-connection__link"
+                    ><img
+                      src="./../images/icons/inst.svg"
                       alt=""
                       class="footer-connection__img"
                   /></a>
@@ -307,7 +328,7 @@
                 <li class="footer-connection__item">
                   <a href="" class="footer-connection__link"
                     ><img
-                      src="./images/icons/vk.svg"
+                      src="./../images/icons/vk.svg"
                       alt=""
                       class="footer-connection__img"
                   /></a>
@@ -315,7 +336,7 @@
                 <li class="footer-connection__item">
                   <a href="" class="footer-connection__link"
                     ><img
-                      src="./images/icons/fb.svg"
+                      src="./../images/icons/fb.svg"
                       alt=""
                       class="footer-connection__img"
                   /></a>
@@ -323,7 +344,7 @@
                 <li class="footer-connection__item">
                   <a href="" class="footer-connection__link"
                     ><img
-                      src="./images/icons/ok.svg"
+                      src="./../images/icons/ok.svg"
                       alt=""
                       class="footer-connection__img"
                   /></a>
@@ -337,9 +358,9 @@
         </div>
       </div>
     </footer>
-    <script src="./js/index.js"></script>
-    <script src="./js/catalog/catalog.js"></script>
-    <script src="./js/category/category.js"></script>
-    <script src="./js/catalog-top/catalogTop.js"></script>
+    <script src="./../js/index.js"></script>
+    <script src="./../js/catalog/catalog.js"></script>
+    <script src="./../js/category/category.js"></script>
+    <script src="./../js/catalog-top/catalogTop.js"></script>
   </body>
 </html>

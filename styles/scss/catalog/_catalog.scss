@@ -1,5 +1,5 @@
 .catalog {
-  &__title{
+  &__title {
     margin-bottom: 60px;
   }
   &__list {
@@ -17,7 +17,6 @@
       rgba(112, 192, 91, 0) 0%,
       #70c05b 82.81%
     );
-    transition: 0.3s;
   }
   // неправильно работает transitioin
   &__item {
@@ -29,7 +28,6 @@
         rgba(255, 102, 51, 0) 0%,
         #ff6633 100%
       );
-      transition: 0.3s;
     }
   }
 
