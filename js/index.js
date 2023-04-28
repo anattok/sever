@@ -1,31 +1,19 @@
 //выпадающее меню
 const menuButton = document.querySelector(".menu__btn-catalog");
+const menuButtonTablet = document.querySelector(".menu-tablet__catalog-btn");
 const droppedMenu = document.querySelector(".catalog-top");
 //меню выезжает по ховеру
-menuButton.addEventListener("click", (e) => {
-  if (
-    e.currentTarget === menuButton &&
-    !droppedMenu.classList.contains("catalog-top--active")
-  ) {
-    droppedMenu.classList.add("catalog-top--active");
-  }
-});
-
-// меню заезжает при уходе курсора с droppedMenu
-// droppedMenu.addEventListener("mouseout", (e) => {
-//   e.stopPropagation();
-//   if (
-//     e.currentTarget === droppedMenu &&
-//     droppedMenu.classList.contains("catalog-top--active")
-//   ) {
-//     droppedMenu.classList.remove("catalog-top--active");
-//   }
-//   console.log(e.currentTarget)
-// });
-
-if (droppedMenu.classList.contains("catalog-top--active")) {
-  window.addEventListener("click", (e) => {
-    console.log(e.currentTarget);
-    droppedMenu.classList.remove("catalog-top--active");
+const dropMenu = (btn) => {
+  btn.addEventListener("click", (e) => {
+    if (
+      e.currentTarget === btn &&
+      !droppedMenu.classList.contains("catalog-top--active")
+    ) {
+      droppedMenu.classList.add("catalog-top--active");
+    } else {
+      droppedMenu.classList.remove("catalog-top--active");
+    }
   });
-}
+};
+dropMenu(menuButtonTablet);
+dropMenu(menuButton);
