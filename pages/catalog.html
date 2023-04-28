@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -38,7 +38,7 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a href="#" class="menu__link"
+              <a href="index.html" class="menu__link"
                 ><picture class="menu__logo">
                   <source
                     class="menu__logo--desctop"
@@ -177,7 +177,7 @@
           </ul>
         </div>
       </div>
-      <!-- <div class="breadcrumps">
+      <div class="breadcrumps">
         <div class="container">
           <ul class="breadcrumps__list">
             <li class="breadcrumps__item">
@@ -188,117 +188,167 @@
             </li>
           </ul>
         </div>
-      </div> -->
+      </div>
       <section class="catalog">
         <div class="container">
           <h2 class="catalog__title title">Каталог</h2>
           <ul class="catalog__list">
             <li class="catalog__item catalog__milk">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                
+                <div class="catalog__item-bg">
+                  <p class="catalog__item-name">Молоко, сыр, яйцо</p>
+                </div>
+                
               </a>
             </li>
             <li class="catalog__item catalog__bread">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Хлеб</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__fruits">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Фрукты и овощи</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__frozen">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Замороженные продукты</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__drinks">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Напитки</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__conditer">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Кондитерские изделия</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__tea">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Чай, кофе</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__pasta">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Бакалея</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__health">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Здоровое питание</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__zoo">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Зоотовары</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__children">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Детское питание</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__kolbasa">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Мясо, птица, колбаса</p></div>
               </a>
             </li>
             <li class="catalog__item catalog__hozka">
               <a href="category.html" class="catalog__link">
-                <div class="catalog__item-bg"></div>
+                <div class="catalog__item-bg"><p class="catalog__item-name">Непродовольственные товары</p></div>
               </a>
             </li>
           </ul>
         </div>
       </section>
+      <nav class="menu-tablet">
+        <ul class="menu-tablet__list">
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__link menu-tablet__catalog-btn">
+              <img
+                class="menu-tablet__link-icon"
+                src="./../images/menu/icons/menu-dark.svg"
+                alt="favorite"
+              />
+              <span>Каталог</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__link menu-tablet__user-favorite">
+              <img
+                class="menu-tablet__link-icon"
+                src="./../images/menu/icons/like.svg"
+                alt="favorite"
+              />
+              <span>Избранное</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__link menu-tablet__user-orders">
+              <img
+                class="menu-tablet__link-icon"
+                src="./../images/menu/icons/box.svg"
+                alt="box"
+              />
+              <span>Заказы</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <a href="#" class="menu-tablet__link menu-tablet__user-cart">
+              <img
+                class="menu-tablet__link-icon"
+                src="./../images/menu/icons/shopping-cart.svg"
+                alt="cart"
+              />
+              <span>Корзина</span>
+            </a>
+          </li>
+          <li class="menu-tablet__item">
+            <button class="menu-tablet__login-btn"></button>
+          </li>
+        </ul>
+      </nav>
     </main>
 
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer__wrapper">
-            <div class="footer__row">
-              <a href="#" class="footer-menu__logo">
-                <img
-                  class="footer-menu__logo-img"
-                  src="./../images/logo-bottom.svg"
-                  alt="logo-bottom"
-                />
-              </a>
-              <ul class="footer-list">
-                <li class="footer-list__item">
-                  <a href="#">О компании</a>
-                </li>
-                <li class="footer-list__item">
-                  <a href="#">Контакты</a>
-                </li>
-                <li class="footer-list__item">
-                  <a href="#">Вакансии</a>
-                </li>
-                <li class="footer-list__item">
-                  <a href="#">Статьи</a>
-                </li>
-                <li class="footer-list__item">
-                  <a href="#">Политика обработки персональных данных</a>
-                </li>
-              </ul>
-            </div>
+            <a href="#" class="footer-menu__logo">
+              <img
+                class="footer-menu__logo-img"
+                src="./../images/logo-bottom.svg"
+                alt="logo-bottom"
+              />
+            </a>
+
+            <ul class="footer-list">
+              <li class="footer-list__item">
+                <a href="#">О компании</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">Контакты</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">Вакансии</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">Статьи</a>
+              </li>
+              <li class="footer-list__item">
+                <a href="#">Политика обработки персональных данных</a>
+              </li>
+            </ul>
 
             <div class="footer-connection">
               <ul class="footer-connection__list">
                 <li class="footer-connection__item">
-                  <a href="" class="footer-connection__link">
-                    <img
+                  <a href="" class="footer-connection__link"
+                    ><img
                       src="./../images/icons/inst.svg"
                       alt=""
                       class="footer-connection__img"

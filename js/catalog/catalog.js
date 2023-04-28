@@ -1083,7 +1083,6 @@ const TEA = [
 const ANIMALS = [
   {
     name: "Сухой корм Purina ONE Adult для активных собак мелких и карликовых пород, с говядиной и рисом, 600 г",
-
     picture: "https://photobank.dixy.ru/images/2000325848/small.png",
     price: 100,
   },
@@ -1867,4 +1866,73 @@ const FROZEN = [
     picture: "https://photobank.dixy.ru/images/2000314572/small.png",
     price: 100,
   },
+];
+
+//MAIN
+const ACTION = [
+  {
+    name: "Нерка ''ФишенВилль'' ломтики холодного копчения, ассорти, 120 г",
+    picture: "https://photobank.dixy.ru/images/2000563111/small.png",
+    price: 100,
+  },
+
+  {
+    name: "Пельмени ''Котлетарь'' Татарские, 400 г",
+    picture: "https://photobank.dixy.ru/images/2000332335/small.png",
+    price: 100,
+  },
+  {
+    name: "Порошок стиральный ''Tide'' Color Lenor, автомат, 2,5 кг",
+    picture: "https://photobank.dixy.ru/images/2000554271/small.png",
+    price: 100,
+  },
+  {
+    name: "Чай ''Richard'' Lord Grey черный в пакетиках, 25 шт",
+    picture: "https://photobank.dixy.ru/images/2000278103/small.png",
+    price: 100,
+  },
+];
+const NOVELTIES = [
+  {
+    name: "Минтай ''Мореслав'' тушка свежемороженая, 800 г",
+    picture: "https://photobank.dixy.ru/images/DI00079597/small.png",
+    price: 100,
+  },
+  {
+    name: "Влажный корм Felix Суп для взрослых кошек с курицей, в соусе, 48 г",
+    picture: "https://photobank.dixy.ru/images/2000325808/small.png",
+    price: 100,
+  },
+  {
+    name: "Ряженка ''Агуша'' 3,2% с 12 месяцев, 200 г",
+    picture: "https://photobank.dixy.ru/images/2000281487/small.png",
+    price: 100,
+  },
+  {
+    name: "Хлеб ''Хлебный Дом'' Тостовый пшеничный, 350 г",
+    picture: "https://photobank.dixy.ru/images/2000410110/small.png",
+    price: 100,
+  }
+];
+const EARLY = [
+  {
+    name: "Пельмени ''Стародворье'' Сочные, 900 г",
+    picture: "https://photobank.dixy.ru/images/2000294688/small.png",
+    price: 100,
+  },
+  {
+    name: "Крупа гречневая ''Пассим'' Алтайская, 800 г",
+    picture: "https://photobank.dixy.ru/images/2000539995/small.png",
+    price: 100,
+  },
+  {
+    name: "Корм для кошек с чувствительным пищеварением ''Perfect Fit'' Лосось, сухой, 650 г",
+    picture: "https://photobank.dixy.ru/images/2000338054/small.png",
+    price: 100,
+  },
+  {
+    name: "Пюре фруктовое ''Агуша'' Персик-Яблоко с 5 месяцев, 90 г",
+    picture: "https://photobank.dixy.ru/images/2000175593/small.png",
+    price: 100,
+  }
 ];

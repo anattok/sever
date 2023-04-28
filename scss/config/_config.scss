@@ -11,12 +11,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  // overflow: hidden; 
+  // overflow: hidden;
 }
 main {
   flex-grow: 1;
 }
-footer{
+footer {
   flex-shrink: 0;
 }
 
@@ -31,10 +31,10 @@ a {
 .container {
   max-width: 1208px;
   margin: 0 auto;
-  padding: 0 16px;
   box-sizing: content-box;
-
+  padding: 0 16px;
 }
+
 .title {
   @extend%rubik-700;
   font-size: 36px;
@@ -50,4 +50,15 @@ a {
   bottom: 0;
   background-color: rgba(252, 213, 186, 0.8);
   z-index: 1000;
+}
+@media (max-width: 740px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 12px;
+  }
 }

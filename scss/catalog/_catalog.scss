@@ -1,23 +1,38 @@
 .catalog {
   &__title {
     margin-bottom: 60px;
+    font-size: 64px;
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 272px);
+    grid-template-areas:
+      "milk milk bread fruits"
+      "frozen drinks conditer tea"
+      "pasta health zoo zoo"
+      "children kolbasa kolbasa hozka";
+
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 200px);
+
     grid-gap: 40px;
     margin-bottom: 80px;
   }
   &__item-bg {
-    height: 200px;
+    height: 100%;
     width: 100%;
     background: linear-gradient(
       180deg,
       rgba(112, 192, 91, 0) 0%,
       #70c05b 82.81%
     );
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    @extend%rubik-700;
+    font-size: 18px;
+    color: $white;
   }
+
   // неправильно работает transitioin
   &__item {
     border-radius: 4px;
@@ -32,87 +47,136 @@
   }
 
   &__milk {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-area: milk;
     background-image: url("/images/catalog/milk.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__bread {
+    grid-area: bread;
     background-image: url("/images/catalog/bread.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__fruits {
+    grid-area: fruits;
     background-image: url("/images/catalog/fruits.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__frozen {
+    grid-area: frozen;
     background-image: url("/images/catalog/frozen.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__drinks {
+    grid-area: drinks;
     background-image: url("/images/catalog/drinks.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__conditer {
+    grid-area: conditer;
     background-image: url("/images/catalog/conditer.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__tea {
+    grid-area: tea;
     background-image: url("/images/catalog/tea.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__pasta {
+    grid-area: pasta;
     background-image: url("/images/catalog/pasta.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__health {
+    grid-area: health;
     background-image: url("/images/catalog/health.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__zoo {
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-area: zoo;
     background-image: url("/images/catalog/zoo.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__children {
+    grid-area: children;
     background-image: url("/images/catalog/children.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__kolbasa {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-area: kolbasa;
     background-image: url("/images/catalog/kolbasa.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
   &__hozka {
+    grid-area: hozka;
     background-image: url("/images/catalog/hozka.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+}
+@media (max-width: 1080px) {
+  .catalog {
+    &__title {
+      margin-bottom: 32px;
+      font-size: 48px;
+    }
+  
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(5, minmax(140px, 1fr));
+      grid-gap: 32px;
+      grid-template-areas:
+        "milk milk bread"
+        "fruits frozen drinks"
+        "conditer tea pasta"
+        "health zoo zoo"
+        "children kolbasa hozka";
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .catalog {
+     &__title {
+      font-size: 36px;
+    }
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(8, minmax(140px, 1fr));
+      grid-gap: 12px;
+      grid-template-areas:
+        "milk milk "
+        "bread fruits"
+        "frozen drinks"
+        "conditer tea"
+        "pasta health"
+        "zoo zoo"
+        "children hozka"
+        "kolbasa kolbasa";
+    }
   }
 }

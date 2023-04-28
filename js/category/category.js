@@ -1,10 +1,28 @@
+//category
 const categoryList = document.querySelector(".category__items");
 
-const render = (category) => {
-  let htmlCatalog = "";
+//main
+const actionsWrapper = document.querySelector(".card-wrapper__actions");
+const noveltiesWrapper = document.querySelector(".card-wrapper__novelties");
+const earlyWrapper = document.querySelector(".card-wrapper__early");
 
-  category.forEach(({ name, picture, price }) => {
-    htmlCatalog += `
+const render = (category, wrapper) => {
+  let htmlCatalog = "";
+  let ul = "";
+
+  const mainOrCategory = () => {
+    //по 4 карточки на главную, по 3 карточки в категорию
+    if (category === NOVELTIES || category === ACTION || category === EARLY) {
+      ul = "cards__list-main";
+    } else {
+      ul = "cards__list";
+    }
+  };
+  mainOrCategory();
+
+  if (wrapper !== null) {
+    category.forEach(({ name, picture, price }) => {
+      htmlCatalog += `
     
               <li class="cards__item">
                 <article class="product-card">
@@ -66,15 +84,20 @@ const render = (category) => {
               </li>
               
     `;
-  });
+    });
 
-  const html = `
-    <ul class="cards__list">
+    const html = `
+    <ul class="${ul}">
         ${htmlCatalog}
     </ul>
     `;
 
-  categoryList.innerHTML = html;
+    wrapper.innerHTML = html;
+  }
 };
 
-render(BREAD);
+render(BREAD, categoryList);
+render(EARLY, earlyWrapper);
+render(NOVELTIES, noveltiesWrapper);
+render(ACTION, actionsWrapper);
+

@@ -1,0 +1,56 @@
+.breadcrumps {
+  margin: 27px 0;
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    width: 102px;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      background-image: url("/images/icons/arrow-right.svg");
+      width: 8px;
+      height: 13px;
+      top: 4px;
+      right: 20px;
+    }
+  }
+  &__item:last-child a {
+    color: $hard;
+    pointer-events: none;
+  }
+  &__link {
+    @extend%rubik-400;
+    font-size: 12px;
+    color: $surface-text;
+  }
+}
+
+@media (max-width: 1080px) {
+  .breadcrumps {
+    margin: 19px 0;
+    &__item:not(:last-child) {
+      width: 86px;
+      &:after {
+        top: 4px;
+        right: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .breadcrumps {
+    margin: 14px 0;
+    &__item:not(:last-child) {
+      width: 63px;
+      &:after {
+        top: 4px;
+        right: 8px;
+      }
+    }
+    &__link {
+    font-size: 8px;
+  }
+  }
+}

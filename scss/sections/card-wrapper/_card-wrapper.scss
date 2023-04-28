@@ -4,12 +4,14 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     margin-bottom: 40px;
   }
 
   &__all-actions {
     padding: 8px 40px 8px 8px;
+    width: 168px;
+    height: 40px;
     @extend%rubik-400;
     font-size: 16px;
     line-height: 150%;
@@ -36,41 +38,37 @@
     grid-template-columns: repeat(3, 272px);
     gap: 40px;
   }
-}
-
-@media (max-width: 1199px) {
-  .card-wrapper {
-    padding-top: 64px;
-    padding-bottom: 40px;
-    &__top {
-      margin-bottom: 32px;
-    }
-    &__title {
-      font-size: 24px;
-    }
+  &__list-main {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 40px;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 792px) {
   .cards {
+    &__list-main {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(160px, 1fr));
+      grid-template-rows: 1fr;
+      gap: 32px;
+    }
     &__item:last-child {
       display: none;
     }
   }
 }
-
-@media (max-width: 730px) {
+@media (max-width: 576px) {
   .cards {
-    &__list{
-      flex-wrap: wrap;
-    }
-    &__item{
-      margin-bottom: 16px;
+    &__list-main {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(160px, 1fr));
+      grid-template-rows: 2fr;
+      gap: 16px;
     }
     &__item:last-child {
       display: block;
     }
   }
 }
-
-

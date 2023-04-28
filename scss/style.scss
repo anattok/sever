@@ -1,0 +1,26 @@
+@import "./config/variables";
+@import "./fonts/fonts";
+@import "./config/config";
+@import "./config/mixins";
+
+@import "./header/header";
+@import "./header/catalog-top/catalog-top";
+@import "./footer/footer";
+@import "./breadcrumps/breadcrumps";
+
+@import "./menu/menu";
+@import "./menu/menu-tablet";
+
+@import "./catalog/catalog";
+@import "./category/category";
+
+@import "./sections/slider/slider";
+@import "./sections/card-wrapper/card-wrapper";
+@import "./sections/card-wrapper/cards/product-card";
+@import "./sections/special/specials";
+@import "./sections/map/map";
+@import "./sections/articles/articles";
+@import "./sections/articles/cards/article-card";
+
+@import "./modal/reg/reg";
+@import "./modal/auth/auth";
