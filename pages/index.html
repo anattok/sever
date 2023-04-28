@@ -1153,8 +1153,8 @@
                 /></label>
                 <label class="form-reg__label form-reg__label-pass" for=""
                   >Пароль<input class="form-reg__input" type="password" />
-                  <button class="form-reg__label-btn"></button></label
-                >
+                  <button class="form-reg__label-btn"></button
+                ></label>
                 <!-- <div class="form-reg__label-pass"></div> -->
                 <label class="form-reg__label form-reg__label-pass" for=""
                   >Повторите пароль<input
@@ -1190,9 +1190,9 @@
                     </select>
                   </div>
                 </label>
-                <div class="form-reg__sex" >
+                <div class="form-reg__sex">
                   <span class="form-reg__label">Пол</span>
-                  <div class="form-reg__sex-radios form-reg__input" tabindex="0">
+                  <div class="form-reg__sex-radios form-reg__input">
                     <div>
                       <input
                         class="form-reg__sex-radio"
@@ -1229,15 +1229,54 @@
                 /></label>
               </div>
               <div class="form-reg__checkbox">
-                <input class="form-reg__checkbox-input" id="card-loyal" type="checkbox" name="" />
-                <label class="form-reg__checkbox-label " for="card-loyal"></label>
-                <span >У меня нет карты лояльности</span>
+                <input
+                  class="form-reg__checkbox-input"
+                  id="card-loyal"
+                  type="checkbox"
+                  name=""
+                />
+                <label
+                  class="form-reg__checkbox-label"
+                  for="card-loyal"
+                ></label>
+                <span>У меня нет карты лояльности</span>
               </div>
               <button class="form-reg__btn-more" type="submit">
                 Продолжить
               </button>
             </form>
             <button class="form-reg__btn-login" type="submit">Вход</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-auth">
+      <div class="overlay">
+        <div class="container">
+          <div class="modal-auth__form">
+            <div class="modal-auth__exit"></div>
+            <h2 class="modal-auth__title">Вход</h2>
+            <form action="" class="form-auth">
+              <label class="form-auth__label form-auth__tel" for=""
+                >Телефон<input class="form-auth__input" type="tel" required
+              /></label>
+              <!-- <label class="form-auth__label form-auth__pass" for=""
+                >Пароль<input class="form-auth__input" type="password" />
+                <button class="form-auth__pass-btn"></button
+              ></label>
+               <label class="form-auth__label form-auth__sms" for=""
+                >Код из СМС<input class="form-auth__input-sms" type="password" />
+                <button class="form-auth__pass-btn"></button
+              ></label> -->
+              <button class="form-auth__btn-inter">Вход</button>
+              <!-- <button class="form-auth__btn-confirm">Подтвердить</button>
+              <button class="form-auth__btn-sms">Отправить СМС</button> -->
+            </form>
+            <div class="modal-auth__row">
+              <button class="modal-auth__btn-reg">Регистрация</button>
+              <!-- <a href="" class="modal-auth__return">Вернуться</a> -->
+              <button class="modal-auth__forgot-pass">Забыли пароль?</button>
+            </div>
           </div>
         </div>
       </div>

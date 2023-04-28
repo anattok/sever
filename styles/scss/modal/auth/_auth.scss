@@ -1,0 +1,96 @@
+.modal-auth {
+  //   display: none;
+  &__exit {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    background-color: $lightest;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    background-image: url("/images/icons/x.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height: 431px;
+    background-color: $white;
+    padding: 72px 80px 40px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 32px;
+    @extend%rubik-700;
+    font-size: 24px;
+    color: $surface-text;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn-reg {
+    width: 121px;
+    height: 32px;
+    border: 1px solid $secondary;
+    background-color: transparent;
+    color: $secondary;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__forgot-pass {
+     width: 121px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    @extend%rubik-400;
+    font-size: 12px;
+    color: $hardest;
+    cursor: pointer;
+  }
+}
+.form-auth {
+  &__label {
+    height: 60px;
+    color: $hard;
+    @extend%rubik-400;
+    font-size: 16px;
+  }
+  &__input {
+    width: 260px;
+    height: 40px;
+    padding: 8px 6px 8px 16px;
+    border: 1px solid $light;
+    color: $surface-text;
+    border-radius: 4px;
+    @extend%rubik-400;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+    margin-bottom: 32px;
+    &:focus {
+      border: 1px solid $secondary;
+      box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+    }
+  }
+  &__btn-inter {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 68px;
+    background: $primary-lite;
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    margin-bottom: 32px;
+    cursor: pointer;
+    color: $primary;
+  }
+}

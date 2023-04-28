@@ -1,4 +1,5 @@
 .modal-reg {
+  display: none;
   &__exit {
     position: absolute;
     width: 40px;
@@ -124,19 +125,23 @@
       margin-left: 8px;
       color: $hard;
     }
-    & :checked ~ .form-reg__checkbox-label {
-      background-color: $secondary;
-      background-image: url("/images/checkbox/ok.svg");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: content;
-    }
   }
   &__checkbox-input {
     width: 20px;
     height: 20px;
     opacity: 0;
     position: absolute;
+    &:checked ~ .form-reg__checkbox-label {
+      background-color: $secondary;
+      background-image: url("/images/checkbox/ok.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: content;
+    }
+    &:focus ~ .form-reg__checkbox-label {
+      border: 1px solid $secondary;
+      box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+    }
   }
   &__checkbox-label {
     display: block;
@@ -178,14 +183,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 4px;
-    //не правильно работает фокус на инпуте пол
-    &:focus  {
-      border: 1px solid $secondary;
-      box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
-    }
   }
   &__sex-radio {
-    // opacity: 0;
+    opacity: 0;
     width: 126px;
     height: 32px;
     position: absolute;
@@ -193,7 +193,10 @@
       background-color: $secondary;
       color: $white;
     }
-    
+    &:focus ~ .form-reg__sex-label {
+      border: 1px solid $secondary;
+      box-shadow: 4px 8px 16px rgba(112, 192, 91, 0.2);
+    }
   }
   &__sex-label {
     display: flex;
@@ -206,5 +209,6 @@
     border-radius: 4px;
     color: $surface-text;
     cursor: pointer;
+    outline: none;
   }
 }

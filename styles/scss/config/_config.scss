@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  // overflow: hidden; 
 }
 main {
   flex-grow: 1;
@@ -41,7 +42,7 @@ a {
   color: $surface-text;
 }
 .overlay {
-  // display: none;
+  overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
