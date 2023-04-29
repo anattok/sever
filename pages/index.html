@@ -105,49 +105,68 @@
         </nav>
       </div>
     </header>
-    
+
     <main class="main">
       <div class="catalog-top">
         <div class="container">
           <ul class="catalog-top__list">
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Молоко, сыр, яйцо</a>
+              <a
+                href="category.html"
+                class="catalog-top__link"
+                data-category="MILK"
+                >Молоко, сыр, яйцо</a
+              >
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Хлеб</a>
+              <a href="category.html" class="catalog-top__link" data-category="BREAD">Хлеб</a>
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Фрукты и овощи</a>
+              <a href="category.html" class="catalog-top__link" data-category="VEGETABLES "
+                >Фрукты и овощи</a
+              >
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Замороженные продукты</a>
+              <a href="category.html" class="catalog-top__link" data-category="FROZEN"
+                >Замороженные продукты</a
+              >
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Напитки</a>
+              <a href="category.html" class="catalog-top__link" data-category="DRINKS">Напитки</a>
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Кондитерские изделия</a>
+              <a href="category.html" class="catalog-top__link" data-category="KONDITER"
+                >Кондитерские изделия</a
+              >
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Чай, кофе</a>
+              <a href="category.html" class="catalog-top__link" data-category="TEA">Чай, кофе</a>
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Бакалея</a>
+              <a href="category.html" class="catalog-top__link" data-category="BAKALEYA">Бакалея</a>
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Здоровое питание</a>
+              <a href="category.html" class="catalog-top__link" data-category="VEGETABLES"
+                >Здоровое питание</a
+              >
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Зоотовары</a>
+              <a href="category.html" class="catalog-top__link" data-category="ANIMALS">Зоотовары</a>
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Непродовольственные товары</a>
+              <a href="category.html" class="catalog-top__link" data-category="HOZKA"
+                >Непродовольственные товары</a
+              >
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Детское питание</a>
+              <a href="category.html" class="catalog-top__link" data-category="CHILDRENS"
+                >Детское питание</a
+              >
             </li>
             <li class="catalog-top__item">
-              <a href="category.html" class="catalog-top__link">Мясо, птица, колбаса</a>
+              <a href="category.html" class="catalog-top__link" data-category="MEAT"
+                >Мясо, птица, колбаса</a
+              >
             </li>
           </ul>
         </div>
@@ -171,9 +190,7 @@
             <h2 class="card-wrapper__title title">Новинки</h2>
             <a href="#" class="card-wrapper__all-actions">Все акции</a>
           </div>
-          <div class="card-wrapper__cards cards card-wrapper__novelties">
-            
-          </div>
+          <div class="card-wrapper__cards cards card-wrapper__novelties"></div>
         </div>
       </section>
 
@@ -183,9 +200,7 @@
             <h2 class="card-wrapper__title title">Акции</h2>
             <a href="#" class="card-wrapper__all-actions">Все акции</a>
           </div>
-          <div class="card-wrapper__cards cards card-wrapper__actions">
-            
-          </div>
+          <div class="card-wrapper__cards cards card-wrapper__actions"></div>
         </div>
       </section>
 
@@ -195,9 +210,7 @@
             <h2 class="card-wrapper__title title">Покупали раньше</h2>
             <a href="#" class="card-wrapper__all-actions">Все акции</a>
           </div>
-          <div class="card-wrapper__cards cards card-wrapper__early">
-            
-          </div>
+          <div class="card-wrapper__cards cards card-wrapper__early"></div>
         </div>
       </section>
 
@@ -595,10 +608,9 @@
         </div>
       </div>
     </div>
-  
-    <script src="./../js/index.js"></script>
     <script src="./../js/catalog/catalog.js"></script>
-    <script src="./../js/category/category.js"></script>
+    <script src="./../js/category-render/render.js"></script>
+    <script src="./../js/index.js"></script>
     <script src="./../js/catalog-top/catalogTop.js"></script>
   </body>
 </html>

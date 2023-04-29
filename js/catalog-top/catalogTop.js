@@ -1,20 +1,31 @@
-// const catalogTop = document.querySelector(".catalog-top");
-// let breadCrumpsList = document.querySelector(".breadcrumps__list");
+const catalogTop = document.querySelector(".catalog-top");
 
-// let crumps = "";
+//выпадающее меню
+const menuButton = document.querySelector(".menu__btn-catalog");
+const menuButtonTablet = document.querySelector(".menu-tablet__catalog-btn");
+const droppedMenu = document.querySelector(".catalog-top");
+//меню выезжает по ховеру
+const dropMenu = (btn) => {
+  btn.addEventListener("click", (e) => {
+    if (
+      e.currentTarget === btn &&
+      !droppedMenu.classList.contains("catalog-top--active")
+    ) {
+      droppedMenu.classList.add("catalog-top--active");
+    } else {
+      droppedMenu.classList.remove("catalog-top--active");
+    }
+  });
+};
+dropMenu(menuButtonTablet);
+dropMenu(menuButton);
 
-// const renderBreadCrumps = () => {
-//     catalogTop.addEventListener("click", (event) => {
-      
-//         const nameCategory = event.target.innerText;
-//     crumps =
-//       breadCrumpsList.innerHTML +
-//       `<li class="breadcrumps__item">
-//               <a href="category.html" class="breadcrumps__link">${nameCategory}</a>
-//             </li>`;
-//         // localStorage.setItem("breadCrumps", "crumps"); 
-//         // console.log(localStorage.getItem('breadCrumps'))
-//     breadCrumpsList.innerHTML = crumps;
-//   });
-// };
-// renderBreadCrumps();
+//click 
+catalogTop.addEventListener("click", (e) => {
+  if (e.target.dataset.category) {
+    const data = e.target.dataset.category;
+    localStorage.setItem("category", data);
+  }
+  console.log("err");
+});
+

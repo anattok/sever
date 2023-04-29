@@ -1,19 +1,17 @@
-//выпадающее меню
-const menuButton = document.querySelector(".menu__btn-catalog");
-const menuButtonTablet = document.querySelector(".menu-tablet__catalog-btn");
-const droppedMenu = document.querySelector(".catalog-top");
-//меню выезжает по ховеру
-const dropMenu = (btn) => {
-  btn.addEventListener("click", (e) => {
-    if (
-      e.currentTarget === btn &&
-      !droppedMenu.classList.contains("catalog-top--active")
-    ) {
-      droppedMenu.classList.add("catalog-top--active");
-    } else {
-      droppedMenu.classList.remove("catalog-top--active");
-    }
-  });
-};
-dropMenu(menuButtonTablet);
-dropMenu(menuButton);
+
+
+//category
+const categoryList = document.querySelector(".category__items");
+
+//main
+const actionsWrapper = document.querySelector(".card-wrapper__actions");
+const noveltiesWrapper = document.querySelector(".card-wrapper__novelties");
+const earlyWrapper = document.querySelector(".card-wrapper__early");
+
+renderMain(earlyWrapper, MAIN.EARLY);
+renderMain(noveltiesWrapper, MAIN.NOVELTIES);
+renderMain(actionsWrapper, MAIN.ACTION);
+
+// console.log(localStorage.getItem("category"));
+
+renderCategory(categoryList);
