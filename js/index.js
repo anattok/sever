@@ -12,6 +12,4 @@ renderMain(earlyWrapper, MAIN.EARLY);
 renderMain(noveltiesWrapper, MAIN.NOVELTIES);
 renderMain(actionsWrapper, MAIN.ACTION);
 
-// console.log(localStorage.getItem("category"));
-
 renderCategory(categoryList);

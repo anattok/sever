@@ -20,12 +20,15 @@ const dropMenu = (btn) => {
 dropMenu(menuButtonTablet);
 dropMenu(menuButton);
 
-//click 
+//click
 catalogTop.addEventListener("click", (e) => {
   if (e.target.dataset.category) {
+    //сохраняем категорию в локал
     const data = e.target.dataset.category;
     localStorage.setItem("category", data);
+    //сохраняем заголовок категории
+    const title = e.target.innerHTML;
+    localStorage.setItem("nameCategory", title);
   }
   console.log("err");
 });
-

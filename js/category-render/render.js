@@ -2,9 +2,13 @@ const renderCategory = (wrapper) => {
 
   let category = localStorage.getItem("category");
 
+  const titleWrapper = document.querySelector(".category__title");
+  const title = localStorage.getItem("nameCategory");
+
   let htmlCatalog = "";
   let ul = "cards__list";
 
+  titleWrapper.innerHTML = title;
 
   if (wrapper !== null) {
     CATALOG[category].forEach(({ name, picture, price }) => {
