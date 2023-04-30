@@ -20,7 +20,7 @@
     &::after {
       position: absolute;
       content: "";
-      background-image: url("/images/icons/arrow-right.svg");
+      background-image: url("./../images/icons/arrow-right.svg");
       background-size: cover;
       width: 7px;
       height: 13px;
@@ -35,8 +35,9 @@
 .cards {
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 272px);
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
     gap: 40px;
+    margin-bottom: 40px;
   }
   &__list-main {
     display: grid;
@@ -48,8 +49,11 @@
 
 @media (max-width: 792px) {
   .cards {
+    &__list {
+      gap: 32px;
+      margin-bottom: 32px;
+    }
     &__list-main {
-      display: grid;
       grid-template-columns: repeat(3, minmax(160px, 1fr));
       grid-template-rows: 1fr;
       gap: 32px;
@@ -61,8 +65,12 @@
 }
 @media (max-width: 576px) {
   .cards {
+    &__list {
+      grid-template-columns: repeat(2, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
     &__list-main {
-      display: grid;
       grid-template-columns: repeat(2, minmax(160px, 1fr));
       grid-template-rows: 2fr;
       gap: 16px;

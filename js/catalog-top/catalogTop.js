@@ -1,4 +1,5 @@
 const catalogTop = document.querySelector(".catalog-top");
+const catalogMain = document.querySelector(".catalog__list");
 
 //выпадающее меню
 const menuButton = document.querySelector(".menu__btn-catalog");
@@ -21,14 +22,22 @@ dropMenu(menuButtonTablet);
 dropMenu(menuButton);
 
 //click
-catalogTop.addEventListener("click", (e) => {
-  if (e.target.dataset.category) {
-    //сохраняем категорию в локал
-    const data = e.target.dataset.category;
-    localStorage.setItem("category", data);
-    //сохраняем заголовок категории
-    const title = e.target.innerHTML;
-    localStorage.setItem("nameCategory", title);
+const catalogHandler = (catalog) => {
+  if (catalog !== null) {
+    catalog.addEventListener("click", (e) => {
+      console.log(e.target);
+      if (e.target.dataset.category) {
+        //сохраняем категорию в локал
+        const data = e.target.dataset.category;
+        localStorage.setItem("category", data);
+        //сохраняем заголовок категории
+        const title = e.target.innerHTML;
+        localStorage.setItem("nameCategory", title);
+      }
+      console.log("err");
+    });
   }
-  console.log("err");
-});
+};
+
+catalogHandler(catalogTop);
+// catalogHandler(catalogMain);

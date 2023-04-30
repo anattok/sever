@@ -1,5 +1,6 @@
-const renderCategory = (wrapper) => {
+const breadCrumpsList = document.querySelector(".breadcrumps__list");
 
+const renderCategory = (wrapper) => {
   let category = localStorage.getItem("category");
 
   const titleWrapper = document.querySelector(".category__title");
@@ -83,11 +84,22 @@ const renderCategory = (wrapper) => {
     `;
 
     wrapper.innerHTML = html;
+
+    //breadcrumps
+    let breadcrumps = breadCrumpsList.innerHTML;
+
+    breadcrumps += `
+    
+              <li class="breadcrumps__item">
+              <a href="catalog.html" class="breadcrumps__link">${title}</a>
+              </li>
+              `;
+    
+    breadCrumpsList.innerHTML = breadcrumps;
   }
 };
 
 const renderMain = (wrapper, category) => {
-
   let htmlCatalog = "";
   let ul = "cards__list-main";
   if (wrapper !== null) {
@@ -164,5 +176,4 @@ const renderMain = (wrapper, category) => {
 
     wrapper.innerHTML = html;
   }
-  
-}
+};

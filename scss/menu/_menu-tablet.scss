@@ -8,6 +8,7 @@
     justify-content: space-between;
     font-size: 8px;
     line-height: 150%;
+    border-top: 1px solid $lightest;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
   }
   &__link {
@@ -43,7 +44,7 @@
     &::before {
       position: absolute;
       content: "";
-      background-image: url("/images/menu/icons/log-in.svg");
+      background-image: url("./../images/menu/icons/log-in.svg");
       width: 24px;
       height: 24px;
       top: 8px;

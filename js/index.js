@@ -1,5 +1,3 @@
-
-
 //category
 const categoryList = document.querySelector(".category__items");
 
