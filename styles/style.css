@@ -17,14 +17,14 @@
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url("./../../fonts/Rubik-Regular.woff2") format("woff2"), url("./../../fonts/Rubik-Regular.woff") format("woff");
+  src: url("./../fonts/Rubik-Regular.woff2") format("woff2"), url("./../fonts/Rubik-Regular.woff") format("woff");
 }
 /* rubik-700 - latin */
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url("./../../fonts/Rubik-Bold.woff2") format("woff2"), url("./../../fonts/Rubik-Bold.woff") format("woff");
+  src: url("./../fonts/Rubik-Bold.woff2") format("woff2"), url("./../fonts/Rubik-Bold.woff") format("woff");
 }
 * {
   box-sizing: border-box;
@@ -375,7 +375,7 @@ a {
   color: #8f8f8f;
   font-size: 16px;
   line-height: 150%;
-  background-image: url("/images/menu/icons/search.svg");
+  background-image: url("./../images/menu/icons/search.svg");
   background-repeat: no-repeat;
   background-position: bottom 7px right 10px;
 }
@@ -424,7 +424,7 @@ a {
 .user__login-btn::before {
   position: absolute;
   content: "";
-  background-image: url("/images/menu/icons/log-in.svg");
+  background-image: url("./../images/menu/icons/log-in.svg");
   width: 24px;
   height: 24px;
   top: 8px;

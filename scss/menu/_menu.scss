@@ -42,7 +42,7 @@
     color: $hard;
     font-size: 16px;
     line-height: 150%;
-    background-image: url("/images/menu/icons/search.svg");
+    background-image: url("./../images/menu/icons/search.svg");
     background-repeat: no-repeat;
     background-position: bottom 7px right 10px;
   }
@@ -92,7 +92,7 @@
     &::before {
       position: absolute;
       content: "";
-      background-image: url("/images/menu/icons/log-in.svg");
+      background-image: url("./../images/menu/icons/log-in.svg");
       width: 24px;
       height: 24px;
       top: 8px;
